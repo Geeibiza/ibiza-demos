@@ -83,14 +83,8 @@
   .btn-line { border: 1.5px solid rgba(239,231,218,.4); color: var(--bone); }
   .btn-line:hover { border-color: var(--gold); color: var(--gold); }
 
-  /* Barber-pole scroll progress */
-  .pole { position: fixed; inset: 0 0 auto 0; height: 5px; z-index: 90; transform-origin: left; transform: scaleX(var(--p, 0));
-    background: repeating-linear-gradient(-45deg, var(--red) 0 10px, var(--bone) 10px 20px, var(--gold) 20px 30px, var(--bone) 30px 40px); background-size: 56.57px 100%; animation: pole 1s linear infinite; }
-  html[dir="rtl"] .pole { transform-origin: right; }
-  @keyframes pole { to { background-position: 56.57px 0; } }
-
   /* Header */
-  header { position: fixed; inset: 5px 0 auto 0; z-index: 50; transition: background .3s; }
+  header { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background .3s; }
   header.solid { background: rgba(11,10,9,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 14px; }
   .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 24px; letter-spacing: .04em; text-transform: uppercase; }
@@ -218,10 +212,10 @@
   footer a:hover { color: var(--gold); }
 
   @media (prefers-reduced-motion: reduce) {
-    body::after, .foil, .btn-gold, .crown, .big-crown, .ticker, .ticker-track, .pole, .neon.is-open { animation: none !important; }
+    body::after, .foil, .btn-gold, .crown, .big-crown, .ticker, .ticker-track, .neon.is-open { animation: none !important; }
   }
   @media (max-width: 900px) {
-    .nav-links { position: fixed; inset: 73px 0 auto 0; flex-direction: column; gap: 0; padding: 8px 16px 20px; background: var(--black); border-bottom: 1px solid var(--line); transform: translateY(-140%); transition: transform .3s; z-index: -1; }
+    .nav-links { position: fixed; inset: 68px 0 auto 0; flex-direction: column; gap: 0; padding: 8px 16px 20px; background: var(--black); border-bottom: 1px solid var(--line); transform: translateY(-140%); transition: transform .3s; z-index: -1; }
     .nav-open .nav-links { transform: none; }
     .nav-links a { padding: 13px 0; font-size: 18px; color: var(--bone); }
     .nav-toggle { display: block; }
@@ -253,7 +247,6 @@
 </style>
 </head>
 <body>
-<div class="pole" aria-hidden="true"></div>
 <header>
   <nav class="wrap nav" aria-label="Principal">
     <a class="logo" href="#" translate="no"><span class="crown" aria-hidden="true"></span>Kings Barber Shop</a>
@@ -422,8 +415,6 @@
   (function () {
     var root = document.documentElement, header = document.querySelector('header');
     function onScroll() {
-      var max = root.scrollHeight - innerHeight;
-      root.style.setProperty('--p', max > 0 ? (scrollY / max).toFixed(4) : 0);
       header.classList.toggle('solid', scrollY > 40);
     }
     addEventListener('scroll', onScroll, { passive: true });
