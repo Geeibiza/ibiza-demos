@@ -11,6 +11,8 @@ const TEMPLATES = '/Users/r2d2/template-machine/templates';
 const { render, footer } = require(path.join(LB, 'build.js'));
 const DEMOS = { cafe: '121', salon: '122', trades: '123', rental: '124', barber: '125' };
 const WA = '34634852119';
+// Old links that should keep working: old slug -> new slug
+const REDIRECTS = { kingbarber: 'kings' };
 const PHONE = '+34 634 852 119';
 
 const pillStyle = `
@@ -70,4 +72,12 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
   const html = render(src, id, data).replace('<!--@footer-->', footer + '<!--@footer-->');
   fs.writeFileSync(path.join(out, 'index.html'), finish(html, slug, proposalLabel(data.NAME)));
   console.log(`✓ ${slug} (proposal from #${id})`);
+}
+
+// Redirect pages for old links
+for (const [from, to] of Object.entries(REDIRECTS)) {
+  const out = path.join(__dirname, from);
+  fs.emptyDirSync(out);
+  fs.writeFileSync(path.join(out, 'index.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Redirecting…</title><meta http-equiv="refresh" content="0; url=../${to}/"><link rel="canonical" href="../${to}/"><a href="../${to}/">../${to}/</a>\n`);
+  console.log(`↪ ${from} -> ${to}`);
 }
