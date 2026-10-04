@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KingBarber · Barbería en Santa Eulària, Ibiza</title>
+<meta name="description" content="KingBarber: degradados, barbas y diseños en Santa Eulària, Ibiza. Sin cita o reservando por WhatsApp.">
+<meta property="og:title" content="KingBarber · Barbería en Santa Eulària">
+<meta property="og:description" content="Degradados, barbas y diseños. Reserva tu silla por WhatsApp.">
+<meta name="theme-color" content="#0b0a09">
+<script>document.documentElement.classList.add('js')</script>
+<!-- EDIT: business details. Opening hours here drive the neon open/closed sign and the hours list. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "KingBarber",
+  "telephone": "+34 634 852 119",
+  "priceRange": "€",
+  "address": { "@type": "PostalAddress", "streetAddress": "Carrer de Huesca", "addressLocality": "Santa Eulària", "postalCode": "07840", "addressRegion": "Illes Balears", "addressCountry": "ES" },
+  "openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "10:00",
+    "closes": "21:00"
+  }
+]
+}
+</script>
+<script>
+  window.SITE = {
+    whatsapp: "34634852119",
+    phone: "+34 634 852 119",
+    mapQuery: "Carrer de Huesca, Santa Eulària, Ibiza",
+    langs: ["es", "en", "ar"],
+    waText: { es: "Hola KingBarber, quería reservar silla 👑", en: "Hi KingBarber, I'd like to book a chair 👑", ar: "مرحبًا KingBarber، أريد حجز موعد 👑" }
+  };
+</script>
+<link rel="preload" href="fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="base.css">
+<style>
+  @font-face { font-family: "Anton"; src: url(fonts/anton-latin-400-normal.woff2) format("woff2"); font-display: swap; }
+  @font-face { font-family: "Inter"; src: url(fonts/inter-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Kufi"; src: url(fonts/noto-kufi-arabic-arabic-wght-normal.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+
+  :root {
+    --black: #0b0a09; --coal: #141210; --coal-2: #1c1916; --bone: #efe7da; --muted: #a59b8d;
+    --gold: #d6a84a; --red: #c8102e; --line: rgba(239,231,218,.12);
+    --foil: linear-gradient(110deg, #7d5a1c 0%, #f6dc8c 20%, #b8862e 38%, #fff3c4 50%, #a87a26 62%, #f0cf78 80%, #7d5a1c 100%);
+    --display: "Anton", "Arial Narrow", Impact, sans-serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --kufi: "Kufi", "Noto Kufi Arabic", "Geeza Pro", sans-serif;
+    --map-bg: #1c1916;
+    --zellige: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23d6a84a' stroke-width='1.2' opacity='.75'%3E%3Crect x='14' y='14' width='20' height='20'/%3E%3Crect x='14' y='14' width='20' height='20' transform='rotate(45 24 24)'/%3E%3Ccircle cx='24' cy='24' r='4'/%3E%3Cpath d='M0 0l8 8M48 0l-8 8M0 48l8-8M48 48l-8-8'/%3E%3C/g%3E%3C/svg%3E");
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --crown: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 52'%3E%3Cpath d='M6 40 2 10l16 13L32 2l14 21 16-13-4 30z'/%3E%3Crect x='6' y='44' width='52' height='7' rx='2'/%3E%3C/svg%3E");
+  }
+  body { background: var(--black); color: var(--bone); font: 16px/1.6 var(--sans); }
+  html[data-lang="ar"] body { font-family: var(--kufi), var(--sans); }
+  body::after { content: ""; position: fixed; inset: -50%; z-index: 100; pointer-events: none; background-image: var(--grain); opacity: .07; animation: grain 1.2s steps(6) infinite; }
+  @keyframes grain { 0% { transform: translate(0,0) } 20% { transform: translate(-3%,2%) } 40% { transform: translate(2%,-3%) } 60% { transform: translate(-2%,-1%) } 80% { transform: translate(3%,3%) } 100% { transform: translate(0,0) } }
+  .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+  .display { font-family: var(--display); text-transform: uppercase; letter-spacing: .01em; line-height: .9; font-weight: 400; }
+  html[data-lang="ar"] .display:lang(ar), html[data-lang="ar"] .display [lang="ar"] { font-family: var(--kufi); font-weight: 800; line-height: 1.2; }
+  .foil { background: var(--foil); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil 6s linear infinite; }
+  @keyframes foil { to { background-position: 250% 0; } }
+  .side { display: inline-flex; align-items: center; gap: 10px; font: 700 12px/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+  .side::before { content: ""; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--gold); background: radial-gradient(circle, var(--gold) 0 3px, transparent 4px); }
+  html[data-lang="ar"] .side { letter-spacing: 0; font-family: var(--kufi); font-size: 14px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 26px; border-radius: 999px; font-weight: 800; font-size: 16px; text-decoration: none; transition: transform .15s, box-shadow .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-gold { background: var(--foil); background-size: 250% 100%; animation: foil 6s linear infinite; color: #1a1306; box-shadow: 0 10px 30px rgba(214,168,74,.25); }
+  .btn-line { border: 1.5px solid rgba(239,231,218,.4); color: var(--bone); }
+  .btn-line:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* Barber-pole scroll progress */
+  .pole { position: fixed; inset: 0 0 auto 0; height: 5px; z-index: 90; transform-origin: left; transform: scaleX(var(--p, 0));
+    background: repeating-linear-gradient(-45deg, var(--red) 0 10px, var(--bone) 10px 20px, var(--gold) 20px 30px, var(--bone) 30px 40px); background-size: 56.57px 100%; animation: pole 1s linear infinite; }
+  html[dir="rtl"] .pole { transform-origin: right; }
+  @keyframes pole { to { background-position: 56.57px 0; } }
+
+  /* Header */
+  header { position: fixed; inset: 5px 0 auto 0; z-index: 50; transition: background .3s; }
+  header.solid { background: rgba(11,10,9,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 14px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 24px; letter-spacing: .04em; text-transform: uppercase; }
+  .crown { display: inline-block; width: 30px; height: 24px; background: var(--foil); background-size: 250% 100%; animation: foil 6s linear infinite; -webkit-mask: var(--crown) center / contain no-repeat; mask: var(--crown) center / contain no-repeat; }
+  .nav-links { display: flex; gap: 26px; }
+  .nav-links a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--muted); }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-right { display: flex; align-items: center; gap: 8px; }
+  .langs { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+  .langs button { background: none; border: 0; color: var(--muted); font: 700 12px var(--sans); padding: 6px 10px; border-radius: 999px; }
+  .langs button[data-lang-set="ar"] { font-family: var(--kufi); font-size: 13px; padding-block: 4px; }
+  .langs button.active { background: var(--bone); color: var(--black); }
+
+  /* Hero */
+  .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 70px; overflow: hidden;
+    background: radial-gradient(60% 50% at 70% 30%, rgba(214,168,74,.14), transparent 70%), radial-gradient(40% 40% at 10% 90%, rgba(200,16,46,.12), transparent 70%); }
+  .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: center; }
+  .sticker { display: inline-flex; flex-direction: column; border: 2px solid var(--bone); font-family: var(--display); text-transform: uppercase; line-height: 1; margin-bottom: 26px; transform: rotate(-3deg); }
+  .sticker span:first-child { background: var(--bone); color: var(--black); padding: 5px 10px 3px; font-size: 13px; letter-spacing: .14em; }
+  .sticker span:last-child { padding: 5px 10px 4px; font-size: 18px; letter-spacing: .06em; }
+  .title { font-size: clamp(96px, 27vw, 260px); margin: 0; }
+  .title .w2 { display: block; color: transparent; -webkit-text-stroke: 2px var(--gold); }
+  .title .w1 { display: block; }
+  .arname { font-family: var(--kufi); font-weight: 800; font-size: clamp(30px, 6vw, 64px); line-height: 1.3; margin: 10px 0 0; direction: rtl; unicode-bidi: isolate; display: inline-block; }
+  .lead { font-size: 18px; color: #d8cfc2; max-width: 46ch; margin: 22px 0 30px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-side { display: grid; justify-items: center; gap: 26px; text-align: center; }
+  .big-crown { width: min(260px, 60vw); aspect-ratio: 64 / 52; background: var(--foil); background-size: 250% 100%; animation: foil 6s linear infinite, float 6s ease-in-out infinite; -webkit-mask: var(--crown) center / contain no-repeat; mask: var(--crown) center / contain no-repeat; filter: drop-shadow(0 20px 40px rgba(214,168,74,.35)); }
+  @keyframes float { 50% { transform: translateY(-10px) rotate(-2deg); } }
+
+  /* Neon sign */
+  .neon { font-family: var(--display); text-transform: uppercase; letter-spacing: .14em; font-size: 22px; padding: 10px 20px 8px; border: 2px solid currentColor; border-radius: 12px; color: #ff4f5e;
+    text-shadow: 0 0 4px currentColor, 0 0 14px currentColor, 0 0 28px currentColor; box-shadow: 0 0 8px currentColor, 0 0 24px rgba(255,79,94,.35), inset 0 0 10px currentColor; opacity: .85; }
+  .neon.is-open { color: #ffd36b; box-shadow: 0 0 8px currentColor, 0 0 28px rgba(255,211,107,.45), inset 0 0 10px currentColor; animation: flicker 2.6s linear 1, hum 4s ease-in-out 2.6s infinite; opacity: 1; }
+  html[data-lang="ar"] .neon { font-family: var(--kufi); font-weight: 800; letter-spacing: 0; }
+  @keyframes flicker { 0%, 8%, 12%, 30%, 34%, 100% { opacity: 1 } 10%, 32% { opacity: .2 } 60% { opacity: .9 } 62% { opacity: .4 } 64% { opacity: 1 } }
+  @keyframes hum { 50% { opacity: .88 } }
+  .rating { font-size: 14px; color: var(--muted); }
+  .rating b { font-family: var(--display); font-size: 34px; color: var(--bone); display: block; letter-spacing: .02em; }
+
+  /* Ticker */
+  .ticker { background: var(--foil); background-size: 250% 100%; animation: foil 8s linear infinite; color: #1a1306; overflow: hidden; border-block: 2px solid #1a1306; transform: rotate(-1.5deg); margin-inline: -20px; }
+  .ticker-wrap { overflow: hidden; padding: 14px 0; }
+  .ticker-track { display: flex; width: max-content; animation: tick 28s linear infinite; }
+  .ticker-track span { font-family: var(--display); text-transform: uppercase; font-size: 30px; padding: 12px 0; white-space: nowrap; }
+  html[data-lang="ar"] .ticker-track span { font-family: var(--kufi); font-weight: 800; font-size: 26px; }
+  @keyframes tick { to { transform: translateX(-50%); } }
+  html[dir="rtl"] .ticker-track { animation-name: tick-rtl; }
+  @keyframes tick-rtl { to { transform: translateX(50%); } }
+
+  section { padding: 110px 0; position: relative; }
+  .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+  .sec-head h2 { font-size: clamp(48px, 8vw, 104px); margin: 14px 0 0; }
+  .zellige { height: 48px; background: var(--zellige) center / 48px 48px repeat-x; opacity: .7; }
+
+  /* Tracklist */
+  .tracks { border-top: 1px solid var(--line); }
+  .track { display: grid; grid-template-columns: 70px 1fr auto auto; align-items: center; gap: 18px; padding: 20px 6px; border-bottom: 1px solid var(--line); transition: background .25s; }
+  .track:hover { background: linear-gradient(90deg, rgba(214,168,74,.10), transparent); }
+  .track .no { font-family: var(--display); font-size: 34px; color: var(--gold); }
+  .track .name { font-family: var(--display); text-transform: uppercase; font-size: clamp(24px, 3.4vw, 40px); line-height: 1; }
+  html[data-lang="ar"] .track .name { font-family: var(--kufi); font-weight: 800; font-size: clamp(20px, 3vw, 32px); line-height: 1.3; }
+  .track .meta { color: var(--muted); font-size: 14px; text-align: end; white-space: nowrap; }
+  .track .meta b { display: block; color: var(--bone); font-family: var(--display); font-size: 24px; font-weight: 400; letter-spacing: .02em; }
+  .play { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--bone); color: var(--black); text-decoration: none; transition: transform .2s, background .2s; }
+  .play:hover { transform: scale(1.08); background: var(--gold); }
+  .play svg { width: 18px; height: 18px; margin-inline-start: 3px; }
+  html[dir="rtl"] .play svg { transform: scaleX(-1); }
+  .walkin { margin-top: 26px; color: var(--muted); }
+  .walkin b { color: var(--gold); }
+
+  /* Before / after */
+  .ba { position: relative; aspect-ratio: 4 / 3; max-width: 760px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); --x: 50%; }
+  .ba .ph { position: absolute; inset: 0; font-family: var(--display); font-size: 22px; letter-spacing: .1em; }
+  .ba .before { --ph: linear-gradient(135deg, #3a332b, #1c1916); }
+  .ba .after { --ph: linear-gradient(135deg, #6b4f1d, #d6a84a 60%, #f3d27a); clip-path: inset(0 0 0 var(--x)); justify-content: flex-end; }
+  .ba .after > span, .ba .before > span { padding: 16px 18px; }
+  .ba .handle { position: absolute; top: 0; bottom: 0; left: var(--x); width: 3px; background: var(--bone); transform: translateX(-50%); pointer-events: none; }
+  .ba .handle::after { content: "⟷"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: 50%; background: var(--bone); color: var(--black); display: grid; place-items: center; font-size: 22px; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+  .ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .ba-hint { text-align: center; color: var(--muted); font-size: 14px; margin-top: 14px; }
+
+  /* Crew */
+  .crew { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .member { background: var(--coal); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+  .member .ph { aspect-ratio: 4 / 5; --ph: linear-gradient(160deg, #2a241e, #0f0d0b); }
+  .member div.txt { padding: 18px 20px 22px; }
+  .member .ft { font-family: var(--display); text-transform: uppercase; font-size: 30px; line-height: 1; }
+  .member .ft i { font-style: normal; color: var(--gold); }
+  html[data-lang="ar"] .member .ft { font-family: var(--kufi); font-weight: 800; font-size: 24px; line-height: 1.4; }
+  .member p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+
+  /* Liner notes */
+  .notes { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+  .score { font-family: var(--display); font-size: clamp(110px, 18vw, 220px); line-height: .85; }
+  .score small { display: block; font-family: var(--sans); font-size: 15px; color: var(--muted); margin-top: 14px; letter-spacing: 0; text-transform: none; }
+  .quotes { display: grid; gap: 18px; }
+  .quote { border-inline-start: 3px solid var(--gold); padding: 6px 0 6px 20px; }
+  html[dir="rtl"] .quote { padding: 6px 20px 6px 0; }
+  .quote p { margin: 0; font-size: 20px; line-height: 1.45; font-style: italic; }
+  .quote p, .quote cite { unicode-bidi: plaintext; }
+  .track .meta, .member .ft i { unicode-bidi: isolate; direction: ltr; }
+  html[dir="rtl"] .track .meta { text-align: right; }
+  .quote cite { display: block; margin-top: 8px; color: var(--muted); font-style: normal; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+
+  /* Visit */
+  .visit { background: var(--coal); border-block: 1px solid var(--line); }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; }
+  .visit h2 { font-size: clamp(48px, 8vw, 96px); margin: 14px 0 18px; }
+  .addr { font-size: 20px; margin: 0 0 22px; }
+  .visit [data-hours] li { border-color: var(--line); }
+  .visit .map-box { border-radius: 20px; border: 1px solid var(--line); }
+  .map-consent small { color: var(--muted); }
+
+  .final { text-align: center; padding: 120px 0; background: radial-gradient(50% 60% at 50% 50%, rgba(214,168,74,.16), transparent 70%); }
+  .final h2 { font-size: clamp(56px, 11vw, 150px); margin: 0 0 30px; }
+
+  footer { padding: 0 0 100px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding-top: 26px; }
+  footer a { margin-inline-start: 18px; text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  @media (prefers-reduced-motion: reduce) {
+    body::after, .foil, .btn-gold, .crown, .big-crown, .ticker, .ticker-track, .pole, .neon.is-open { animation: none !important; }
+  }
+  @media (max-width: 900px) {
+    .nav-links { position: fixed; inset: 73px 0 auto 0; flex-direction: column; gap: 0; padding: 8px 16px 20px; background: var(--black); border-bottom: 1px solid var(--line); transform: translateY(-140%); transition: transform .3s; z-index: -1; }
+    .nav-open .nav-links { transform: none; }
+    .nav-links a { padding: 13px 0; font-size: 18px; color: var(--bone); }
+    .nav-toggle { display: block; }
+    .hero { padding-top: 110px; }
+    .hero-grid, .notes, .visit-grid { grid-template-columns: 1fr; }
+    .hero-side { grid-template-columns: auto 1fr; justify-items: start; text-align: start; align-items: center; gap: 18px; }
+    .big-crown { width: 96px; }
+    .hero-side .rating { grid-column: 1 / -1; }
+    .crew { grid-template-columns: 1fr; }
+    .member { display: grid; grid-template-columns: 120px 1fr; align-items: center; }
+    .member .ph { aspect-ratio: 1; height: 100%; }
+    .track { grid-template-columns: 44px 1fr auto; gap: 12px; }
+    .track .meta { grid-column: 2; grid-row: 2; text-align: start; }
+    .track .meta b { display: inline; margin-inline-end: 8px; }
+    .track .play { grid-column: 3; grid-row: 1 / span 2; }
+    .track .no { font-size: 26px; }
+    section { padding: 80px 0; }
+    footer a { margin: 0 18px 0 0; }
+  }
+</style>
+</head>
+<body>
+<div class="pole" aria-hidden="true"></div>
+<header>
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="logo" href="#"><span class="crown" aria-hidden="true"></span>KingBarber</a>
+    <div class="nav-links">
+      <a href="#tracklist"><span lang="es">Tracklist</span><span lang="en">Tracklist</span><span lang="ar">القائمة</span></a>
+      <a href="#antes-despues"><span lang="es">Antes / después</span><span lang="en">Before / after</span><span lang="ar">قبل / بعد</span></a>
+      <a href="#crew"><span lang="es">El equipo</span><span lang="en">The crew</span><span lang="ar">الفريق</span></a>
+      <a href="#visitanos"><span lang="es">Visítanos</span><span lang="en">Visit</span><span lang="ar">زورونا</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="langs" role="group" aria-label="Idioma / Language / اللغة">
+        <button type="button" data-lang-set="es">ES</button>
+        <button type="button" data-lang-set="en">EN</button>
+        <button type="button" data-lang-set="ar">ع</button>
+      </div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="sticker" aria-hidden="true"><span><span lang="es">Cortes frescos</span><span lang="en">Fresh cuts</span><span lang="ar">قصّات جديدة</span></span><span>Santa Eulària · Ibiza</span></div>
+        <h1 class="display title"><span class="w1 foil">King</span><span class="w2">Barber</span></h1>
+        <p class="arname" lang="ar-MA"><span class="foil">كينغ باربر</span></p>
+        <p class="lead"><span lang="es">Degradados, barbas y diseños en Santa Eulària. Ven sin cita o reserva tu silla por WhatsApp.</span><span lang="en">Fades, beards and hair designs in Santa Eulària. Walk in, or book your chair on WhatsApp.</span><span lang="ar">تدريج، لحية وتصاميم في سانتا أولاريا. تعال بدون موعد أو احجز كرسيك عبر واتساب.</span></p>
+        <div class="actions">
+          <a class="btn btn-gold" data-wa href="#"><span lang="es">Reserva tu silla 👑</span><span lang="en">Book your chair 👑</span><span lang="ar">احجز كرسيك 👑</span></a>
+          <a class="btn btn-line" href="#tracklist"><span lang="es">Ver la tracklist</span><span lang="en">See the tracklist</span><span lang="ar">شاهد القائمة</span></a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="big-crown" aria-hidden="true"></div>
+        <span class="neon" data-open-status>Abierto ahora</span>
+        <div class="rating"><b><bdi dir="ltr">4,7★</bdi></b><span lang="es">134 reseñas en Google</span><span lang="en">134 Google reviews</span><span lang="ar">134 مراجعة على Google</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+    <div class="ticker-track">
+      <span lang="es">Degradado ✦ Barba ✦ Diseños ✦ Niños ✦ Navaja ✦ Degradado ✦ Barba ✦ Diseños ✦ Niños ✦ Navaja ✦&nbsp;</span><span lang="es">Degradado ✦ Barba ✦ Diseños ✦ Niños ✦ Navaja ✦ Degradado ✦ Barba ✦ Diseños ✦ Niños ✦ Navaja ✦&nbsp;</span>
+      <span lang="en">Skin fade ✦ Beard ✦ Designs ✦ Kids ✦ Razor ✦ Skin fade ✦ Beard ✦ Designs ✦ Kids ✦ Razor ✦&nbsp;</span><span lang="en">Skin fade ✦ Beard ✦ Designs ✦ Kids ✦ Razor ✦ Skin fade ✦ Beard ✦ Designs ✦ Kids ✦ Razor ✦&nbsp;</span>
+      <span lang="ar">تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦ تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦&nbsp;</span><span lang="ar">تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦ تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦&nbsp;</span>
+    </div>
+  </div></div>
+
+  <section id="tracklist">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="side"><span lang="es">Cara A</span><span lang="en">Side A</span><span lang="ar">الوجه أ</span></span><h2 class="display"><span lang="es">La tracklist</span><span lang="en">The tracklist</span><span lang="ar">القائمة</span></h2></div>
+      </div>
+      <div class="tracks">
+        <div class="track reveal"><span class="no">01</span><span class="name"><span lang="es">Corte clásico</span><span lang="en">Classic cut</span><span lang="ar">قصة كلاسيكية</span></span><span class="meta"><b>·· €</b>30 min</span><a class="play" data-wa href="#" data-wa-es="Hola KingBarber, quería reservar: Corte clásico" data-wa-en="Hi KingBarber, I'd like to book: Classic cut" data-wa-ar="مرحبًا، أريد حجز: قصة كلاسيكية" aria-label="Reservar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a></div>
+        <div class="track reveal"><span class="no">02</span><span class="name"><span lang="es">Degradado</span><span lang="en">Skin fade</span><span lang="ar">تدريج (فيد)</span></span><span class="meta"><b>·· €</b>40 min</span><a class="play" data-wa href="#" data-wa-es="Hola KingBarber, quería reservar: Degradado" data-wa-en="Hi KingBarber, I'd like to book: Skin fade" data-wa-ar="مرحبًا، أريد حجز: تدريج" aria-label="Reservar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a></div>
+        <div class="track reveal"><span class="no">03</span><span class="name"><span lang="es">Barba</span><span lang="en">Beard trim</span><span lang="ar">تهذيب اللحية</span></span><span class="meta"><b>·· €</b>20 min</span><a class="play" data-wa href="#" data-wa-es="Hola KingBarber, quería reservar: Barba" data-wa-en="Hi KingBarber, I'd like to book: Beard trim" data-wa-ar="مرحبًا، أريد حجز: تهذيب اللحية" aria-label="Reservar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a></div>
+        <div class="track reveal"><span class="no">04</span><span class="name"><span lang="es">Corte + barba</span><span lang="en">Cut + beard</span><span lang="ar">قصة + لحية</span></span><span class="meta"><b>·· €</b>50 min</span><a class="play" data-wa href="#" data-wa-es="Hola KingBarber, quería reservar: Corte + barba" data-wa-en="Hi KingBarber, I'd like to book: Cut + beard" data-wa-ar="مرحبًا، أريد حجز: قصة + لحية" aria-label="Reservar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a></div>
+        <div class="track reveal"><span class="no">05</span><span class="name"><span lang="es">Diseño / líneas</span><span lang="en">Hair design</span><span lang="ar">رسم على الشعر</span></span><span class="meta"><b>·· €</b>15 min</span><a class="play" data-wa href="#" data-wa-es="Hola KingBarber, quería reservar: Diseño" data-wa-en="Hi KingBarber, I'd like to book: Hair design" data-wa-ar="مرحبًا، أريد حجز: رسم على الشعر" aria-label="Reservar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a></div>
+        <div class="track reveal"><span class="no">06</span><span class="name"><span lang="es">Niños</span><span lang="en">Kids</span><span lang="ar">أطفال</span></span><span class="meta"><b>·· €</b>25 min</span><a class="play" data-wa href="#" data-wa-es="Hola KingBarber, quería reservar: Corte niño" data-wa-en="Hi KingBarber, I'd like to book: Kids cut" data-wa-ar="مرحبًا، أريد حجز: قصة أطفال" aria-label="Reservar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a></div>
+      </div>
+      <p class="walkin reveal"><span lang="es">Precios y tiempos: los ponemos juntos. </span><span lang="en">Prices and times: we'll fill them in together. </span><span lang="ar">الأسعار والأوقات: نضعها معًا. </span><br><span lang="es"><b>Sin cita:</b> ven cuando quieras. Reservando por WhatsApp no esperas.</span><span lang="en"><b>Walk-ins welcome.</b> Book on WhatsApp to skip the wait.</span><span lang="ar"><b>بدون موعد:</b> تعال متى شئت. احجز عبر واتساب ولا تنتظر.</span></p>
+    </div>
+  </section>
+
+  <div class="zellige" aria-hidden="true"></div>
+
+  <section id="antes-despues">
+    <div class="wrap">
+      <div class="sec-head reveal" style="justify-content:center;text-align:center">
+        <div><span class="side"><span lang="es">El sello de la casa</span><span lang="en">Signature work</span><span lang="ar">بصمتنا</span></span><h2 class="display"><span lang="es">Antes / después</span><span lang="en">Before / after</span><span lang="ar">قبل / بعد</span></h2></div>
+      </div>
+      <div class="ba reveal" dir="ltr">
+        <div class="ph before"><span><span lang="es">Antes</span><span lang="en">Before</span><span lang="ar">قبل</span> · <span lang="es">foto</span><span lang="en">photo</span><span lang="ar">صورة</span></span></div>
+        <div class="ph after"><span><span lang="es">Después</span><span lang="en">After</span><span lang="ar">بعد</span> · <span lang="es">foto</span><span lang="en">photo</span><span lang="ar">صورة</span></span></div>
+        <div class="handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Antes / después" data-ba>
+      </div>
+      <p class="ba-hint"><span lang="es">Desliza para ver el cambio</span><span lang="en">Drag to see the change</span><span lang="ar">اسحب لترى الفرق</span></p>
+    </div>
+  </section>
+
+  <section id="crew" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="side"><span lang="es">Cara B</span><span lang="en">Side B</span><span lang="ar">الوجه ب</span></span><h2 class="display"><span lang="es">El equipo</span><span lang="en">The crew</span><span lang="ar">الفريق</span></h2></div>
+      </div>
+      <!-- EDIT: real names + photos (with their OK). -->
+      <div class="crew">
+        <div class="member reveal"><div class="ph"><span>Foto</span></div><div class="txt"><div class="ft"><i>ft.</i> <span lang="es">Tu nombre</span><span lang="en">Your name</span><span lang="ar">اسمك</span></div><p><span lang="es">Rey del degradado</span><span lang="en">King of fades</span><span lang="ar">ملك التدريج</span></p></div></div>
+        <div class="member reveal"><div class="ph"><span>Foto</span></div><div class="txt"><div class="ft"><i>ft.</i> <span lang="es">Tu nombre</span><span lang="en">Your name</span><span lang="ar">اسمك</span></div><p><span lang="es">Barbas y navaja</span><span lang="en">Beards &amp; razor</span><span lang="ar">اللحى والموس</span></p></div></div>
+        <div class="member reveal"><div class="ph"><span>Foto</span></div><div class="txt"><div class="ft"><i>ft.</i> <span lang="es">Tu nombre</span><span lang="en">Your name</span><span lang="ar">اسمك</span></div><p><span lang="es">Diseños y líneas</span><span lang="en">Designs &amp; lines</span><span lang="ar">التصاميم والخطوط</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones" style="padding-top:0">
+    <div class="wrap notes">
+      <div class="reveal">
+        <span class="side"><span lang="es">Notas del disco</span><span lang="en">Liner notes</span><span lang="ar">ملاحظات الألبوم</span></span>
+        <div class="score display foil" style="margin-top:18px"><bdi dir="ltr">4,7★</bdi><small><span lang="es">134 reseñas en Google</span><span lang="en">134 reviews on Google</span><span lang="ar">134 مراجعة على Google</span></small></div>
+      </div>
+      <div class="quotes">
+<div class="quote reveal"><p>“…mi peluquería favorita con diferencia, muy buen precio y en mi opinión mejores degradados de la isla.”</p><cite>Angelo M. · Google</cite></div>
+<div class="quote reveal"><p>“Buen trato y buenos profesionales.”</p><cite>Google</cite></div>
+<div class="quote reveal"><p>“Los peluqueros son además de educados, muy profesionales.”</p><cite>Google</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visitanos" class="visit">
+    <div class="wrap visit-grid">
+      <div class="reveal">
+        <span class="side"><span lang="es">Encuéntranos</span><span lang="en">Find us</span><span lang="ar">موقعنا</span></span>
+        <h2 class="display"><span lang="es">Visítanos</span><span lang="en">Pull up</span><span lang="ar">زورونا</span></h2>
+        <p class="addr">Carrer de Huesca<br>07840 Santa Eulària</p>
+        <ul data-hours></ul>
+        <div class="actions" style="margin-top:26px">
+          <a class="btn btn-gold" data-directions href="#"><span lang="es">Cómo llegar</span><span lang="en">Directions</span><span lang="ar">الاتجاهات</span></a>
+          <a class="btn btn-line" data-tel href="#"><span lang="es">Llamar</span><span lang="en">Call</span><span lang="ar">اتصل</span></a>
+        </div>
+      </div>
+      <div class="map-box reveal" data-map>
+        <div class="map-consent">
+          <strong><span lang="es">Mapa de Google</span><span lang="en">Google Map</span><span lang="ar">خريطة Google</span></strong>
+          <small><span lang="es">Al cargar el mapa, Google puede usar cookies.</span><span lang="en">Loading the map lets Google set cookies.</span><span lang="ar">عند تحميل الخريطة قد تستخدم Google ملفات تعريف الارتباط.</span></small>
+          <button class="btn btn-line" type="button" style="justify-self:center"><span lang="es">Cargar mapa</span><span lang="en">Load map</span><span lang="ar">تحميل الخريطة</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="final">
+    <div class="wrap reveal">
+      <h2 class="display"><span lang="es">Tu silla <span class="foil">te espera</span></span><span lang="en">Your chair <span class="foil">is waiting</span></span><span lang="ar">كرسيك <span class="foil">بانتظارك</span></span></h2>
+      <a class="btn btn-gold" data-wa href="#"><span lang="es">Reserva por WhatsApp 👑</span><span lang="en">Book on WhatsApp 👑</span><span lang="ar">احجز عبر واتساب 👑</span></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="zellige" aria-hidden="true"></div>
+  <div class="wrap">
+    <span>© <span data-year></span> KingBarber · Santa Eulària, Ibiza</span>
+    <span>
+      <a href="#" data-open-legal="aviso"><span lang="es">Aviso legal</span><span lang="en">Legal notice</span><span lang="ar">إشعار قانوني</span></a>
+      <a href="#" data-open-legal="privacidad"><span lang="es">Privacidad</span><span lang="en">Privacy</span><span lang="ar">الخصوصية</span></a>
+      <a href="#" data-open-legal="cookies">Cookies</a>
+    </span>
+  </div>
+</footer>
+<script>
+  (function () {
+    var root = document.documentElement, header = document.querySelector('header');
+    function onScroll() {
+      var max = root.scrollHeight - innerHeight;
+      root.style.setProperty('--p', max > 0 ? (scrollY / max).toFixed(4) : 0);
+      header.classList.toggle('solid', scrollY > 40);
+    }
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    document.querySelectorAll('[data-ba]').forEach(function (r) {
+      r.addEventListener('input', function () { r.parentNode.style.setProperty('--x', r.value + '%'); });
+    });
+  })();
+</script>
+<!-- Legal pages (LSSI-CE + RGPD). Fill every highlighted [placeholder] per client.
+     Starting text only: have the client's gestoría/lawyer check it. -->
+<dialog class="legal" id="legal" aria-label="Legal">
+  <div class="legal-bar"><button type="button" data-close-legal><span lang="es">Cerrar</span><span lang="en">Close</span></button></div>
+  <div class="legal-inner">
+    <div lang="es">
+      <h2 id="aviso">Aviso legal</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa:</p>
+      <ul>
+        <li>Titular: <span class="ph-note">[Nombre y apellidos o razón social]</span></li>
+        <li>NIF/CIF: <span class="ph-note">[NIF]</span></li>
+        <li>Domicilio: <span class="ph-note">[Dirección completa, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Teléfono: <span data-tel-text></span></li>
+        <li><span class="ph-note">[Si es sociedad: datos del Registro Mercantil]</span></li>
+      </ul>
+      <p>Los textos, fotos y logotipos de esta web pertenecen a su titular o se usan con permiso. No se permite su reproducción sin autorización.</p>
+
+      <h2 id="privacidad">Política de privacidad</h2>
+      <h3>Responsable</h3>
+      <p>El titular indicado en el aviso legal.</p>
+      <h3>Qué datos tratamos</h3>
+      <p>Esta web no tiene formularios que guarden datos. Los botones y formularios abren WhatsApp con un mensaje ya escrito; tú decides si lo envías. Si nos contactas por WhatsApp, teléfono o email, usamos tu nombre, teléfono y lo que nos cuentes solo para responderte y gestionar tu petición.</p>
+      <h3>Base legal y conservación</h3>
+      <p>Tu consentimiento al contactarnos y, en su caso, la aplicación de medidas precontractuales (art. 6.1.a y 6.1.b RGPD). Conservamos los datos el tiempo necesario para atenderte y cumplir obligaciones legales.</p>
+      <h3>Terceros</h3>
+      <p>No cedemos tus datos salvo obligación legal. WhatsApp (Meta) trata los mensajes según su propia política de privacidad. La web está alojada en <span class="ph-note">[proveedor de hosting]</span>.</p>
+      <h3>Tus derechos</h3>
+      <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <span class="ph-note">[email]</span>. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+
+      <h2 id="cookies">Cookies</h2>
+      <p>Esta web no usa cookies propias ni herramientas de analítica. Solo guarda en tu navegador el idioma que eliges, y ese dato no sale de tu dispositivo. El mapa de Google solo se carga si pulsas «Cargar mapa». A partir de ese momento Google puede instalar cookies según su propia política.</p>
+    </div>
+
+    <div lang="en">
+      <h2 id="aviso-en">Legal notice</h2>
+      <p>As required by article 10 of Spanish Law 34/2002 (LSSI-CE):</p>
+      <ul>
+        <li>Owner: <span class="ph-note">[Full name or company name]</span></li>
+        <li>Tax ID (NIF/CIF): <span class="ph-note">[NIF]</span></li>
+        <li>Address: <span class="ph-note">[Full address, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Phone: <span data-tel-text></span></li>
+        <li><span class="ph-note">[If a company: Mercantile Registry details]</span></li>
+      </ul>
+      <p>The text, photos and logos on this site belong to the owner or are used with permission. Please don't reproduce them without authorisation.</p>
+
+      <h2 id="privacidad-en">Privacy policy</h2>
+      <h3>Controller</h3>
+      <p>The owner named in the legal notice.</p>
+      <h3>What data we process</h3>
+      <p>This website has no forms that store data. Buttons and forms open WhatsApp with a pre-written message, and you decide whether to send it. If you contact us by WhatsApp, phone or email, we use your name, number and message only to reply and handle your request.</p>
+      <h3>Legal basis and retention</h3>
+      <p>Your consent when you contact us and, where relevant, pre-contractual steps (art. 6.1.a and 6.1.b GDPR). We keep data only as long as needed to help you and to meet legal obligations.</p>
+      <h3>Third parties</h3>
+      <p>We don't share your data unless the law requires it. WhatsApp (Meta) processes messages under its own privacy policy. This site is hosted by <span class="ph-note">[hosting provider]</span>.</p>
+      <h3>Your rights</h3>
+      <p>You can request access, correction, deletion, objection, restriction and portability by writing to <span class="ph-note">[email]</span>. You can also complain to the Spanish Data Protection Agency (aepd.es).</p>
+
+      <h2 id="cookies-en">Cookies</h2>
+      <p>This site uses no cookies of its own and no analytics. It only remembers your chosen language in your browser, and that never leaves your device. The Google map loads only if you tap "Load map". From then on, Google may set cookies under its own policy.</p>
+    </div>
+  </div>
+</dialog>
+<a class="wa-float" data-wa href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="site.js"></script>
+
+
+<style>
+  .demo-pill { position: fixed; left: 16px; bottom: 16px; z-index: 70; max-width: calc(100% - 104px); background: rgba(20,20,20,.88); color: #fff; font: 12px/1.4 system-ui, sans-serif; padding: 8px 12px; border-radius: 12px; }
+  .demo-pill a { color: #fff; font-weight: 700; }
+  html[dir="rtl"] .demo-pill { font-family: "Kufi", system-ui, sans-serif; }
+  @media (max-width: 900px) { body:has(.callbar) .demo-pill { bottom: 72px; } }
+</style>
+<div class="demo-pill">
+  <span lang="es"><b>Propuesta no oficial</b> de Gee para KingBarber. Los botones escriben a Gee.</span>
+  <span lang="en"><b>Unofficial proposal</b> by Gee for KingBarber. Buttons message Gee.</span>
+  <span lang="ar"><b>اقتراح غير رسمي</b> من Gee لـ KingBarber. الأزرار تراسل Gee.</span>
+</div>
+</body>
+</html>

@@ -1,7 +1,12 @@
 /* Shared base for local-business templates */
-html[data-lang="es"] body [lang="en"],
-html[data-lang="en"] body [lang="es"],
-html:not([data-lang]) body [lang="en"] { display: none !important; }
+html[data-lang="es"] body [lang="en"], html[data-lang="es"] body [lang="ar"],
+html[data-lang="en"] body [lang="es"], html[data-lang="en"] body [lang="ar"],
+html[data-lang="ar"] body [lang="es"], html[data-lang="ar"] body [lang="en"],
+html:not([data-lang]) body [lang="en"], html:not([data-lang]) body [lang="ar"] { display: none !important; }
+/* Legal texts exist in ES/EN only: Arabic visitors see the Spanish version, left-to-right */
+html[data-lang="ar"] body dialog.legal .legal-inner > [lang="es"] { display: block !important; }
+html[data-lang="ar"] body dialog.legal .legal-bar [lang="es"] { display: inline !important; }
+html[dir="rtl"] dialog.legal { direction: ltr; text-align: left; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }

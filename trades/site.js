@@ -1,20 +1,25 @@
 /* Local-business site helpers. No cookies, no tracking, no external requests
    until the visitor clicks the map or a WhatsApp link.
-   Config: window.SITE = { whatsapp, phone, mapQuery, waText: {es, en} }
+   Config: window.SITE = { whatsapp, phone, mapQuery, waText: {es, en}, langs: ['es','en'] }
+   Two languages use a [data-lang-toggle] button; three use [data-lang-set="xx"] buttons.
+   Arabic ('ar') switches the page to right-to-left.
    Opening hours are read from the JSON-LD block (openingHoursSpecification). */
 (function () {
   var S = window.SITE || {};
+  var LANGS = S.langs || ['es', 'en'];
   var root = document.documentElement;
   root.classList.add('js');
 
   var DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   var DAY_NAMES = {
     es: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'],
-    en: DAYS
+    en: DAYS,
+    ar: ['الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت', 'الأحد']
   };
   var T = {
     es: { open: 'Abierto ahora', closed: 'Cerrado ahora', shut: 'Cerrado', toggle: 'EN', aria: 'Switch to English' },
-    en: { open: 'Open now', closed: 'Closed now', shut: 'Closed', toggle: 'ES', aria: 'Cambiar a español' }
+    en: { open: 'Open now', closed: 'Closed now', shut: 'Closed', toggle: 'ES', aria: 'Cambiar a español' },
+    ar: { open: 'مفتوح الآن', closed: 'مغلق الآن', shut: 'مغلق', toggle: 'ES', aria: 'Español' }
   };
 
   function lang() { return root.getAttribute('data-lang') || 'es'; }
@@ -22,20 +27,28 @@
   function initialLang() {
     try {
       var saved = localStorage.getItem('lang');
-      if (saved === 'es' || saved === 'en') return saved;
+      if (LANGS.indexOf(saved) !== -1) return saved;
     } catch (e) {}
-    return (navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+    var nav = (navigator.language || 'es').toLowerCase().slice(0, 2);
+    if (LANGS.indexOf(nav) !== -1) return nav;
+    return LANGS.indexOf('en') !== -1 ? 'en' : LANGS[0];
   }
 
   function setLang(l) {
     root.setAttribute('data-lang', l);
     root.lang = l;
+    root.dir = l === 'ar' ? 'rtl' : 'ltr';
     try { localStorage.setItem('lang', l); } catch (e) {}
     document.querySelectorAll('[data-es][data-en]').forEach(function (el) {
-      el.textContent = el.getAttribute('data-' + l);
+      el.textContent = el.getAttribute('data-' + l) || el.getAttribute('data-es');
     });
     document.querySelectorAll('[data-es-placeholder]').forEach(function (el) {
-      el.placeholder = el.getAttribute('data-' + l + '-placeholder') || '';
+      el.placeholder = el.getAttribute('data-' + l + '-placeholder') || el.getAttribute('data-es-placeholder');
+    });
+    document.querySelectorAll('[data-lang-set]').forEach(function (b) {
+      var on = b.getAttribute('data-lang-set') === l;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
     document.querySelectorAll('[data-lang-toggle]').forEach(function (b) {
       b.textContent = T[l].toggle;
@@ -99,6 +112,7 @@
         var name = document.createElement('span');
         name.textContent = DAY_NAMES[l][i];
         var time = document.createElement('span');
+        time.dir = 'ltr';
         time.textContent = m[d].length
           ? m[d].map(function (r) { return r[0] + '–' + r[1]; }).join(', ')
           : T[l].shut;
@@ -205,6 +219,9 @@
   });
   document.querySelectorAll('[data-lang-toggle]').forEach(function (b) {
     b.addEventListener('click', function () { setLang(lang() === 'es' ? 'en' : 'es'); });
+  });
+  document.querySelectorAll('[data-lang-set]').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang-set')); });
   });
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
