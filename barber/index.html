@@ -71,7 +71,7 @@
   @keyframes grain { 0% { transform: translate(0,0) } 20% { transform: translate(-3%,2%) } 40% { transform: translate(2%,-3%) } 60% { transform: translate(-2%,-1%) } 80% { transform: translate(3%,3%) } 100% { transform: translate(0,0) } }
   .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
   .display { font-family: var(--display); text-transform: uppercase; letter-spacing: .01em; line-height: .9; font-weight: 400; }
-  html[data-lang="ar"] .display:lang(ar), html[data-lang="ar"] .display [lang="ar"] { font-family: var(--kufi); font-weight: 800; line-height: 1.2; }
+  html[data-lang="ar"] .display [lang="ar"] { font-family: var(--kufi); font-weight: 800; line-height: 1.2; }
   .foil { background: var(--foil); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil 6s linear infinite; }
   @keyframes foil { to { background-position: 250% 0; } }
   .side { display: inline-flex; align-items: center; gap: 10px; font: 700 12px/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
