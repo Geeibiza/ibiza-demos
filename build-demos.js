@@ -70,7 +70,15 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
   fs.copySync(path.join(TEMPLATES, id, 'static'), out);
   const src = fs.readFileSync(path.join(LB, 'pages', `${id}.html`), 'utf8');
   const html = render(src, id, data).replace('<!--@footer-->', footer + '<!--@footer-->');
-  fs.writeFileSync(path.join(out, 'index.html'), finish(html, slug, proposalLabel(data.NAME)));
+  let page = finish(html, slug, proposalLabel(data.NAME));
+  // Optional real hero photo (only with the business's OK), from ../kingbarber-local/photos/
+  if (data.HERO_PHOTO) {
+    const srcPhoto = path.join(__dirname, '..', 'kingbarber-local', 'photos', data.HERO_PHOTO);
+    fs.ensureDirSync(path.join(out, 'photos'));
+    require('child_process').execFileSync('sips', ['-Z', '1400', '-s', 'formatOptions', '72', srcPhoto, '--out', path.join(out, 'photos', data.HERO_PHOTO)], { stdio: 'ignore' });
+    page = page.replace('</style>\n</head>', `  .hero { background: linear-gradient(180deg, rgba(11,10,9,.78), rgba(11,10,9,.9) 60%, #0b0a09), url(photos/${data.HERO_PHOTO}) center / cover; }\n</style>\n</head>`);
+  }
+  fs.writeFileSync(path.join(out, 'index.html'), page);
   console.log(`✓ ${slug} (proposal from #${id})`);
 }
 
