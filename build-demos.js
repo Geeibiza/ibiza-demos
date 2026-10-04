@@ -115,6 +115,17 @@ ${figs}
 
   <section id="tracklist">`);
   }
+  // Optional real photos in the "best cuts" grid, filling the first tiles in order
+  if (data.CUT_PHOTOS) {
+    fs.ensureDirSync(path.join(out, 'photos'));
+    for (const c of data.CUT_PHOTOS) {
+      resizePhoto(path.join(__dirname, '..', 'kingbarber-local', 'photos', c.file), path.join(out, 'photos', c.file));
+      const ph = '<figure class="cut reveal"><div class="ph"><span>Foto</span></div>';
+      if (!page.includes(ph)) throw new Error(`${slug}: no free cut tile for ${c.file}`);
+      page = page.replace(ph, `<figure class="cut reveal"><img class="cut-img" src="photos/${c.file}" alt="${c.alt}" loading="lazy" style="object-position:${c.pos || 'center'}">`);
+    }
+    page = page.replace('</style>\n</head>', `  .cut-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }\n  .cut:hover .cut-img { transform: scale(1.05); }\n</style>\n</head>`);
+  }
   fs.writeFileSync(path.join(out, 'index.html'), page);
   console.log(`✓ ${slug} (proposal from #${id})`);
 }

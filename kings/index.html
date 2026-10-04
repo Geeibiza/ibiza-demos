@@ -250,6 +250,8 @@
     .shop-grid.three figure { aspect-ratio: 4 / 3; }
     .shop-grid.three figure:first-child { grid-row: span 2; aspect-ratio: auto; }
   }
+  .cut-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .cut:hover .cut-img { transform: scale(1.05); }
 </style>
 </head>
 <body>
@@ -339,8 +341,8 @@
       </div>
       <!-- EDIT: 6 photos of their best cuts (back/side of head, or customers who agreed). -->
       <div class="cuts">
-        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Degradado</span><span lang="en">Skin fade</span><span lang="ar">تدريج</span></figcaption></figure>
-        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Diseño</span><span lang="en">Hair design</span><span lang="ar">رسم على الشعر</span></figcaption></figure>
+        <figure class="cut reveal"><img class="cut-img" src="photos/fade-1.jpg" alt="Degradado" loading="lazy" style="object-position:center 40%"><figcaption><span lang="es">Degradado</span><span lang="en">Skin fade</span><span lang="ar">تدريج</span></figcaption></figure>
+        <figure class="cut reveal"><img class="cut-img" src="photos/fade-2.jpg" alt="Degradado con línea" loading="lazy" style="object-position:center 22%"><figcaption><span lang="es">Diseño</span><span lang="en">Hair design</span><span lang="ar">رسم على الشعر</span></figcaption></figure>
         <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Barba</span><span lang="en">Beard</span><span lang="ar">لحية</span></figcaption></figure>
         <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Clásico</span><span lang="en">Classic</span><span lang="ar">كلاسيكي</span></figcaption></figure>
         <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Texturizado</span><span lang="en">Textured crop</span><span lang="ar">قصة مموجة</span></figcaption></figure>
