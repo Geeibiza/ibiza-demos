@@ -78,6 +78,32 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
     require('child_process').execFileSync('sips', ['-Z', '1400', '-s', 'formatOptions', '72', srcPhoto, '--out', path.join(out, 'photos', data.HERO_PHOTO)], { stdio: 'ignore' });
     page = page.replace('</style>\n</head>', `  .hero { background: linear-gradient(180deg, rgba(11,10,9,.78), rgba(11,10,9,.9) 60%, #0b0a09), url(photos/${data.HERO_PHOTO}) center / cover; }\n</style>\n</head>`);
   }
+  // Optional photo section (only with the business's OK)
+  if (data.GALLERY) {
+    fs.ensureDirSync(path.join(out, 'photos'));
+    const figs = data.GALLERY.map(g => {
+      require('child_process').execFileSync('sips', ['-Z', '1400', '-s', 'formatOptions', '72', path.join(__dirname, '..', 'kingbarber-local', 'photos', g.file), '--out', path.join(out, 'photos', g.file)], { stdio: 'ignore' });
+      return `        <figure><img src="photos/${g.file}" alt="${g.alt}" loading="lazy"><figcaption><span lang="es">${g.es}</span><span lang="en">${g.en}</span><span lang="ar">${g.ar}</span></figcaption></figure>`;
+    }).join('\n');
+    page = page.replace('</style>\n</head>', `  .shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .shop-grid figure { margin: 0; position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 3 / 4; }
+  .shop-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .shop-grid figure:hover img { transform: scale(1.04); }
+  .shop-grid figcaption { position: absolute; left: 12px; bottom: 12px; background: rgba(11,10,9,.75); padding: 5px 10px; border-radius: 99px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+  html[dir="rtl"] .shop-grid figcaption { left: auto; right: 12px; letter-spacing: 0; }
+  @media (max-width: 900px) { .shop-grid { gap: 10px; } }
+</style>\n</head>`);
+    page = page.replace('  <section id="tracklist">', `  <section id="el-local" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><span class="side"><span lang="es">El local</span><span lang="en">The shop</span><span lang="ar">المحل</span></span><h2 class="display"><span lang="es">Trono de oro</span><span lang="en">Golden thrones</span><span lang="ar">عروش ذهبية</span></h2></div></div>
+      <div class="shop-grid reveal">
+${figs}
+      </div>
+    </div>
+  </section>
+
+  <section id="tracklist">`);
+  }
   fs.writeFileSync(path.join(out, 'index.html'), page);
   console.log(`✓ ${slug} (proposal from #${id})`);
 }

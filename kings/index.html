@@ -243,6 +243,13 @@
     footer a { margin: 0 18px 0 0; }
   }
   .hero { background: linear-gradient(180deg, rgba(11,10,9,.78), rgba(11,10,9,.9) 60%, #0b0a09), url(photos/shop.jpg) center / cover; }
+  .shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .shop-grid figure { margin: 0; position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 3 / 4; }
+  .shop-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .shop-grid figure:hover img { transform: scale(1.04); }
+  .shop-grid figcaption { position: absolute; left: 12px; bottom: 12px; background: rgba(11,10,9,.75); padding: 5px 10px; border-radius: 99px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+  html[dir="rtl"] .shop-grid figcaption { left: auto; right: 12px; letter-spacing: 0; }
+  @media (max-width: 900px) { .shop-grid { gap: 10px; } }
 </style>
 </head>
 <body>
@@ -295,6 +302,16 @@
       <span lang="ar">تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦ تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦&nbsp;</span><span lang="ar">تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦ تدريج ✦ لحية ✦ تصاميم ✦ أطفال ✦ موس ✦&nbsp;</span>
     </div>
   </div></div>
+
+  <section id="el-local" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><span class="side"><span lang="es">El local</span><span lang="en">The shop</span><span lang="ar">المحل</span></span><h2 class="display"><span lang="es">Trono de oro</span><span lang="en">Golden thrones</span><span lang="ar">عروش ذهبية</span></h2></div></div>
+      <div class="shop-grid reveal">
+        <figure><img src="photos/gold-chair.jpg" alt="Sillón de barbero dorado" loading="lazy"><figcaption><span lang="es">El trono</span><span lang="en">The throne</span><span lang="ar">العرش</span></figcaption></figure>
+        <figure><img src="photos/chair-closeup.jpg" alt="Detalle del sillón" loading="lazy"><figcaption><span lang="es">Detalle</span><span lang="en">Detail</span><span lang="ar">تفاصيل</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
 
   <section id="tracklist">
     <div class="wrap">

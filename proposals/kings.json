@@ -33,5 +33,21 @@
     }
   ],
   "REVIEWS_HTML": "<div class=\"quote reveal\"><p>“…mi peluquería favorita con diferencia, muy buen precio y en mi opinión mejores degradados de la isla.”</p><cite>Angelo M. · Google</cite></div>\n<div class=\"quote reveal\"><p>“Buen trato y buenos profesionales.”</p><cite>Google</cite></div>\n<div class=\"quote reveal\"><p>“Los peluqueros son además de educados, muy profesionales.”</p><cite>Google</cite></div>",
-  "HERO_PHOTO": "shop.jpg"
+  "HERO_PHOTO": "shop.jpg",
+  "GALLERY": [
+    {
+      "file": "gold-chair.jpg",
+      "alt": "Sillón de barbero dorado",
+      "es": "El trono",
+      "en": "The throne",
+      "ar": "العرش"
+    },
+    {
+      "file": "chair-closeup.jpg",
+      "alt": "Detalle del sillón",
+      "es": "Detalle",
+      "en": "Detail",
+      "ar": "تفاصيل"
+    }
+  ]
 }
