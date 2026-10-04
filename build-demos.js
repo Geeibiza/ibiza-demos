@@ -78,6 +78,6 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
 for (const [from, to] of Object.entries(REDIRECTS)) {
   const out = path.join(__dirname, from);
   fs.emptyDirSync(out);
-  fs.writeFileSync(path.join(out, 'index.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Redirecting…</title><meta http-equiv="refresh" content="0; url=../${to}/"><link rel="canonical" href="../${to}/"><a href="../${to}/">../${to}/</a>\n`);
+  fs.writeFileSync(path.join(out, 'index.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="icon" href="data:,"><title>Redirecting…</title><meta http-equiv="refresh" content="0; url=../${to}/"><link rel="canonical" href="../${to}/"><a href="../${to}/">../${to}/</a>\n`);
   console.log(`↪ ${from} -> ${to}`);
 }
