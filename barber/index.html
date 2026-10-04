@@ -164,16 +164,18 @@
   .walkin { margin-top: 26px; color: var(--muted); }
   .walkin b { color: var(--gold); }
 
-  /* Before / after */
-  .ba { position: relative; aspect-ratio: 4 / 3; max-width: 760px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); --x: 50%; }
-  .ba .ph { position: absolute; inset: 0; font-family: var(--display); font-size: 22px; letter-spacing: .1em; }
-  .ba .before { --ph: linear-gradient(135deg, #3a332b, #1c1916); }
-  .ba .after { --ph: linear-gradient(135deg, #6b4f1d, #d6a84a 60%, #f3d27a); clip-path: inset(0 0 0 var(--x)); justify-content: flex-end; }
-  .ba .after > span, .ba .before > span { padding: 16px 18px; }
-  .ba .handle { position: absolute; top: 0; bottom: 0; left: var(--x); width: 3px; background: var(--bone); transform: translateX(-50%); pointer-events: none; }
-  .ba .handle::after { content: "⟷"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: 50%; background: var(--bone); color: var(--black); display: grid; place-items: center; font-size: 22px; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
-  .ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  .ba-hint { text-align: center; color: var(--muted); font-size: 14px; margin-top: 14px; }
+  /* Best cuts */
+  .cuts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .cut { position: relative; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); margin: 0; }
+  .cut .ph { position: absolute; inset: 0; transition: transform .6s ease; --ph: linear-gradient(160deg, #2a241e, #0f0d0b); }
+  .cut:nth-child(2) .ph, .cut:nth-child(6) .ph { --ph: linear-gradient(160deg, #6b4f1d, #1c1916); }
+  .cut:nth-child(4) .ph { --ph: linear-gradient(160deg, #3a332b, #0b0a09); }
+  .cut:hover .ph { transform: scale(1.05); }
+  .cut figcaption { position: absolute; left: 12px; bottom: 12px; z-index: 1; background: rgba(11,10,9,.78); padding: 6px 12px; border-radius: 99px; font: 400 15px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+  html[dir="rtl"] .cut figcaption { left: auto; right: 12px; }
+  html[data-lang="ar"] .cut figcaption { font-family: var(--kufi); font-weight: 700; font-size: 13px; letter-spacing: 0; line-height: 1.4; }
+  .cut .ph > span { position: absolute; top: 0; right: 0; }
+  .cuts-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 16px; }
 
   /* Crew */
   .crew { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -229,6 +231,7 @@
     .big-crown { width: 96px; }
     .hero-side .rating { grid-column: 1 / -1; }
     .crew { grid-template-columns: 1fr; }
+    .cuts { grid-template-columns: 1fr 1fr; gap: 10px; }
     .member { display: grid; grid-template-columns: 120px 1fr; align-items: center; }
     .member .ph { aspect-ratio: 1; height: 100%; }
     .track { grid-template-columns: 44px 1fr auto; gap: 12px; }
@@ -248,7 +251,7 @@
     <a class="logo" href="#"><span class="crown" aria-hidden="true"></span>Royal Fade</a>
     <div class="nav-links">
       <a href="#tracklist"><span lang="es">Tracklist</span><span lang="en">Tracklist</span><span lang="ar">القائمة</span></a>
-      <a href="#antes-despues"><span lang="es">Antes / después</span><span lang="en">Before / after</span><span lang="ar">قبل / بعد</span></a>
+      <a href="#cortes"><span lang="es">Cortes</span><span lang="en">Cuts</span><span lang="ar">القصّات</span></a>
       <a href="#crew"><span lang="es">El equipo</span><span lang="en">The crew</span><span lang="ar">الفريق</span></a>
       <a href="#visitanos"><span lang="es">Visítanos</span><span lang="en">Visit</span><span lang="ar">زورونا</span></a>
     </div>
@@ -311,18 +314,20 @@
 
   <div class="zellige" aria-hidden="true"></div>
 
-  <section id="antes-despues">
+  <section id="cortes">
     <div class="wrap">
       <div class="sec-head reveal" style="justify-content:center;text-align:center">
-        <div><span class="side"><span lang="es">El sello de la casa</span><span lang="en">Signature work</span><span lang="ar">بصمتنا</span></span><h2 class="display"><span lang="es">Antes / después</span><span lang="en">Before / after</span><span lang="ar">قبل / بعد</span></h2></div>
+        <div><span class="side"><span lang="es">El sello de la casa</span><span lang="en">Signature work</span><span lang="ar">بصمتنا</span></span><h2 class="display"><span lang="es">Los mejores cortes</span><span lang="en">Best cuts</span><span lang="ar">أفضل القصّات</span></h2></div>
       </div>
-      <div class="ba reveal" dir="ltr">
-        <div class="ph before"><span><span lang="es">Antes</span><span lang="en">Before</span><span lang="ar">قبل</span> · <span lang="es">foto</span><span lang="en">photo</span><span lang="ar">صورة</span></span></div>
-        <div class="ph after"><span><span lang="es">Después</span><span lang="en">After</span><span lang="ar">بعد</span> · <span lang="es">foto</span><span lang="en">photo</span><span lang="ar">صورة</span></span></div>
-        <div class="handle"></div>
-        <input type="range" min="0" max="100" value="50" aria-label="Antes / después" data-ba>
+      <!-- EDIT: 6 photos of their best cuts (back/side of head, or customers who agreed). -->
+      <div class="cuts">
+        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Degradado</span><span lang="en">Skin fade</span><span lang="ar">تدريج</span></figcaption></figure>
+        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Diseño</span><span lang="en">Hair design</span><span lang="ar">رسم على الشعر</span></figcaption></figure>
+        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Barba</span><span lang="en">Beard</span><span lang="ar">لحية</span></figcaption></figure>
+        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Clásico</span><span lang="en">Classic</span><span lang="ar">كلاسيكي</span></figcaption></figure>
+        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Texturizado</span><span lang="en">Textured crop</span><span lang="ar">قصة مموجة</span></figcaption></figure>
+        <figure class="cut reveal"><div class="ph"><span>Foto</span></div><figcaption><span lang="es">Corte + barba</span><span lang="en">Cut + beard</span><span lang="ar">قصة + لحية</span></figcaption></figure>
       </div>
-      <p class="ba-hint"><span lang="es">Desliza para ver el cambio</span><span lang="en">Drag to see the change</span><span lang="ar">اسحب لترى الفرق</span></p>
     </div>
   </section>
 
@@ -405,9 +410,6 @@
     }
     addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    document.querySelectorAll('[data-ba]').forEach(function (r) {
-      r.addEventListener('input', function () { r.parentNode.style.setProperty('--x', r.value + '%'); });
-    });
   })();
 </script>
 <!-- Legal pages (LSSI-CE + RGPD). Fill every highlighted [placeholder] per client.
