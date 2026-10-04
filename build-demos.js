@@ -96,10 +96,13 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
   .shop-grid figure:hover img { transform: scale(1.04); }
   .shop-grid figcaption { position: absolute; left: 12px; bottom: 12px; background: rgba(11,10,9,.75); padding: 5px 10px; border-radius: 99px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
   html[dir="rtl"] .shop-grid figcaption { left: auto; right: 12px; letter-spacing: 0; }
-  .shop-grid.three { grid-template-rows: auto auto; }
-  .shop-grid.three figure { aspect-ratio: 4 / 3; }
-  .shop-grid.three figure:first-child { grid-row: span 2; aspect-ratio: auto; }
-  @media (max-width: 900px) { .shop-grid { gap: 10px; } }
+  .shop-grid.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 900px) {
+    .shop-grid { gap: 10px; }
+    .shop-grid.three { grid-template-columns: 1fr 1fr; }
+    .shop-grid.three figure { aspect-ratio: 4 / 3; }
+    .shop-grid.three figure:first-child { grid-row: span 2; aspect-ratio: auto; }
+  }
 </style>\n</head>`);
     page = page.replace('  <section id="tracklist">', `  <section id="el-local" style="padding-bottom:0">
     <div class="wrap">
