@@ -27,7 +27,7 @@ for (const [slug, id] of Object.entries(DEMOS)) {
   fs.copySync(path.join(TEMPLATES, id, 'static'), out);
   let html = fs.readFileSync(path.join(out, 'index.html'), 'utf8');
   html = html
-    .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">')
+    .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">\n<link rel="icon" href="data:,">')
     .replace(/whatsapp: "34600000000"/, `whatsapp: "${WA}"`)
     .replace(/phone: "\+34 600 000 000"/, `phone: "${PHONE}"`)
     .replace(/"telephone": "\+34 600 000 000"/, `"telephone": "${PHONE}"`)
