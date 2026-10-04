@@ -50,6 +50,13 @@ function finish(html, slug, label) {
     .replace(/"telephone": "\+34 600 000 000"/, `"telephone": "${PHONE}"`)
     .replace('<!--@footer-->', '')
     .replace(/<\/body>/, label + '\n</body>');
+  // Demos live on GitHub Pages, not SiteGround: keep the legal text accurate
+  html = html
+    .replace('La web está alojada en SiteGround, con servidores en Madrid (Unión Europea). Como cualquier servidor web, registra datos técnicos de las visitas (por ejemplo, la dirección IP) por motivos de seguridad.',
+             'Esta demo está alojada en GitHub Pages (GitHub, Inc., EE. UU.). Como cualquier servidor web, registra datos técnicos de las visitas (por ejemplo, la dirección IP) por motivos de seguridad.')
+    .replace('This site is hosted by SiteGround, on servers in Madrid (European Union). Like any web server, it logs technical visit data (such as IP addresses) for security.',
+             'This demo is hosted on GitHub Pages (GitHub, Inc., USA). Like any web server, it logs technical visit data (such as IP addresses) for security.');
+  if (html.includes('SiteGround')) throw new Error(`${slug}: SiteGround hosting text left in a GitHub Pages demo`);
   if (html.includes('34600000000') || html.includes('600 000 000')) throw new Error(`${slug}: placeholder number left`);
   if (html.includes('{{')) throw new Error(`${slug}: unfilled token`);
   return html;
