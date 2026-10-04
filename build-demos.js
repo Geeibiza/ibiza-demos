@@ -37,6 +37,11 @@ const proposalLabel = name => pillStyle + `
   <span lang="ar"><b>اقتراح غير رسمي</b> من Gee لـ ${name}. الأزرار تراسل Gee.</span>
 </div>`;
 
+// Shrinks a photo to max 1400px (never enlarges), JPEG quality 72
+function resizePhoto(src, dest) {
+  require('child_process').execFileSync('python3', ['-c', 'import sys;from PIL import Image;i=Image.open(sys.argv[1]).convert("RGB");i.thumbnail((1400,1400));i.save(sys.argv[2],"JPEG",quality=72,optimize=True,progressive=True)', src, dest]);
+}
+
 function finish(html, slug, label) {
   html = html
     .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">\n<link rel="icon" href="data:,">')
@@ -75,14 +80,14 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
   if (data.HERO_PHOTO) {
     const srcPhoto = path.join(__dirname, '..', 'kingbarber-local', 'photos', data.HERO_PHOTO);
     fs.ensureDirSync(path.join(out, 'photos'));
-    require('child_process').execFileSync('sips', ['-Z', '1400', '-s', 'formatOptions', '72', srcPhoto, '--out', path.join(out, 'photos', data.HERO_PHOTO)], { stdio: 'ignore' });
+    resizePhoto(srcPhoto, path.join(out, 'photos', data.HERO_PHOTO));
     page = page.replace('</style>\n</head>', `  .hero { background: linear-gradient(180deg, rgba(11,10,9,.78), rgba(11,10,9,.9) 60%, #0b0a09), url(photos/${data.HERO_PHOTO}) center / cover; }\n</style>\n</head>`);
   }
   // Optional photo section (only with the business's OK)
   if (data.GALLERY) {
     fs.ensureDirSync(path.join(out, 'photos'));
     const figs = data.GALLERY.map(g => {
-      require('child_process').execFileSync('sips', ['-Z', '1400', '-s', 'formatOptions', '72', path.join(__dirname, '..', 'kingbarber-local', 'photos', g.file), '--out', path.join(out, 'photos', g.file)], { stdio: 'ignore' });
+      resizePhoto(path.join(__dirname, '..', 'kingbarber-local', 'photos', g.file), path.join(out, 'photos', g.file));
       return `        <figure><img src="photos/${g.file}" alt="${g.alt}" loading="lazy"><figcaption><span lang="es">${g.es}</span><span lang="en">${g.en}</span><span lang="ar">${g.ar}</span></figcaption></figure>`;
     }).join('\n');
     page = page.replace('</style>\n</head>', `  .shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
