@@ -48,6 +48,13 @@
       "es": "Detalle",
       "en": "Detail",
       "ar": "تفاصيل"
+    },
+    {
+      "file": "products.jpg",
+      "alt": "Productos",
+      "es": "Productos",
+      "en": "Products",
+      "ar": "المنتجات"
     }
   ]
 }

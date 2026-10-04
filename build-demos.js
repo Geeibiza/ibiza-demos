@@ -96,12 +96,15 @@ for (const file of fs.readdirSync(path.join(__dirname, 'proposals')).filter(f =>
   .shop-grid figure:hover img { transform: scale(1.04); }
   .shop-grid figcaption { position: absolute; left: 12px; bottom: 12px; background: rgba(11,10,9,.75); padding: 5px 10px; border-radius: 99px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
   html[dir="rtl"] .shop-grid figcaption { left: auto; right: 12px; letter-spacing: 0; }
+  .shop-grid.three { grid-template-rows: auto auto; }
+  .shop-grid.three figure { aspect-ratio: 4 / 3; }
+  .shop-grid.three figure:first-child { grid-row: span 2; aspect-ratio: auto; }
   @media (max-width: 900px) { .shop-grid { gap: 10px; } }
 </style>\n</head>`);
     page = page.replace('  <section id="tracklist">', `  <section id="el-local" style="padding-bottom:0">
     <div class="wrap">
       <div class="sec-head reveal"><div><span class="side"><span lang="es">El local</span><span lang="en">The shop</span><span lang="ar">المحل</span></span><h2 class="display"><span lang="es">Trono de oro</span><span lang="en">Golden thrones</span><span lang="ar">عروش ذهبية</span></h2></div></div>
-      <div class="shop-grid reveal">
+      <div class="shop-grid${data.GALLERY.length === 3 ? ' three' : ''} reveal">
 ${figs}
       </div>
     </div>
