@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cala Serena Boats · Alquiler de barcos en Ibiza</title>
+<meta name="description" content="Alquiler de barcos con y sin patrón desde el puerto de Sant Antoni, Ibiza. Flota, precios por temporada y reservas por WhatsApp.">
+<meta property="og:title" content="Cala Serena Boats · Alquiler de barcos en Ibiza">
+<meta property="og:description" content="Barcos con y sin patrón. Precios por temporada y reserva por WhatsApp.">
+<meta name="theme-color" content="#0c3b5e">
+<script>document.documentElement.classList.add('js')</script>
+<!-- EDIT: business details. Opening hours here drive the "Open now" badge and hours list. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Cala Serena Boats",
+  "description": "Alquiler de barcos en Ibiza",
+  "telephone": "+34 634 852 119",
+  "priceRange": "€€€",
+  "address": { "@type": "PostalAddress", "streetAddress": "Port de Sant Antoni, pantalán 0", "addressLocality": "Sant Antoni de Portmany", "postalCode": "07820", "addressRegion": "Illes Balears", "addressCountry": "ES" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "20:00" }
+  ]
+}
+</script>
+<script>
+  window.SITE = {
+    whatsapp: "34634852119",
+    phone: "+34 634 852 119",
+    mapQuery: "Port de Sant Antoni de Portmany, Ibiza",
+    waText: { es: "Hola Cala Serena, quería información para alquilar un barco.", en: "Hi Cala Serena, I'd like info about renting a boat." }
+  };
+</script>
+<link rel="preload" href="fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="base.css">
+<style>
+  @font-face { font-family: "DM Serif Display"; src: url(fonts/dm-serif-display-latin-400-normal.woff2) format("woff2"); font-display: swap; }
+  @font-face { font-family: "DM Serif Display"; src: url(fonts/dm-serif-display-latin-400-italic.woff2) format("woff2"); font-style: italic; font-display: swap; }
+  @font-face { font-family: "Manrope"; src: url(fonts/manrope-latin-wght-normal.woff2) format("woff2"); font-weight: 200 800; font-display: swap; }
+
+  :root {
+    --sea: #0c3b5e; --sea-2: #145079; --aqua: #4fb3bf; --sand: #efe6d8; --white: #fff; --bg: #fbf9f5; --text: #10283a; --muted: #5d6f7d;
+    --line: rgba(16,40,58,.12); --serif: "DM Serif Display", Georgia, serif; --sans: "Manrope", system-ui, sans-serif; --map-bg: #dce9ee;
+  }
+  body { background: var(--bg); color: var(--text); font: 16px/1.65 var(--sans); }
+  .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.02; letter-spacing: -.01em; }
+  h2 em, h1 em { color: var(--aqua); }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--aqua); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1.5px solid transparent; transition: background .2s, color .2s, transform .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-sea { background: var(--sea); color: #fff; }
+  .btn-sea:hover { background: var(--sea-2); }
+  .btn-white { background: #fff; color: var(--sea); }
+  .btn-glass { border-color: rgba(255,255,255,.6); color: #fff; background: rgba(255,255,255,.08); backdrop-filter: blur(6px); }
+  .btn-line { border-color: var(--sea); color: var(--sea); }
+
+  header { position: absolute; top: 0; left: 0; right: 0; z-index: 40; color: #fff; }
+  header.solid { position: fixed; background: rgba(12,59,94,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 16px; }
+  .logo { font-family: var(--serif); font-size: 26px; text-decoration: none; }
+  .logo em { color: #bfeef3; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { text-decoration: none; font-weight: 600; font-size: 15px; opacity: .9; }
+  .nav-links a:hover { opacity: 1; }
+  .nav-right { display: flex; gap: 10px; align-items: center; }
+  .lang { background: none; border: 1.5px solid rgba(255,255,255,.5); color: #fff; border-radius: 999px; padding: 7px 12px; font-weight: 700; font-size: 13px; }
+
+  /* Hero */
+  .hero { position: relative; min-height: 92vh; min-height: 92svh; display: flex; align-items: flex-end; color: #fff; }
+  .hero .ph { position: absolute; inset: 0; --ph: linear-gradient(180deg, #5fb7c4 0%, #1d6f95 45%, #0c3b5e 100%); align-items: flex-start; justify-content: flex-end; }
+  .hero .ph > span { margin-top: 96px; }
+  .hero-inner { position: relative; padding: 140px 0 64px; }
+  .hero h1 { font-size: clamp(50px, 8.5vw, 116px); max-width: 12ch; }
+  .hero p { font-size: 19px; max-width: 44ch; margin: 20px 0 30px; opacity: .92; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.14); margin-bottom: 20px; }
+  .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #ccc; }
+  .status.is-open::before { background: #6ee7a8; }
+  .status.is-closed::before { background: #ffb38a; }
+  .hero-facts { display: flex; gap: 40px; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.25); flex-wrap: wrap; }
+  .hero-facts b { font-family: var(--serif); font-size: 32px; font-weight: 400; display: block; line-height: 1; }
+  .hero-facts div > span { font-size: 14px; opacity: .85; }
+
+  section { padding: 100px 0; }
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 44px; }
+  .head h2 { font-size: clamp(38px, 5.5vw, 64px); margin-top: 10px; }
+
+  /* Fleet */
+  .fleet { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .boat { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; }
+  .boat .ph { aspect-ratio: 4/3; }
+  .boat:nth-child(1) .ph { --ph: linear-gradient(150deg, #7cc6cf, #1d6f95); }
+  .boat:nth-child(2) .ph { --ph: linear-gradient(150deg, #e9dcc6, #b59a72); }
+  .boat:nth-child(3) .ph { --ph: linear-gradient(150deg, #3f86a8, #0c3b5e); }
+  .boat-body { padding: 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .boat h3 { font-size: 30px; }
+  .specs { display: flex; flex-wrap: wrap; gap: 8px; }
+  .specs span { font-size: 13px; font-weight: 600; background: var(--sand); border-radius: 999px; padding: 5px 12px; }
+  .price { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .price b { font-family: var(--serif); font-size: 30px; font-weight: 400; }
+  .price small { color: var(--muted); font-size: 13px; display: block; }
+
+  /* Seasons */
+  .seasons { background: var(--sea); color: #fff; }
+  .seasons .eyebrow { color: var(--aqua); }
+  .table-wrap { overflow-x: auto; border-radius: 18px; border: 1px solid rgba(255,255,255,.15); }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { padding: 18px 20px; text-align: left; border-bottom: 1px solid rgba(255,255,255,.12); }
+  th { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.7); font-weight: 700; }
+  td:first-child { font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .incl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  .incl div { background: rgba(255,255,255,.06); border-radius: 16px; padding: 18px; font-size: 15px; }
+  .incl b { display: block; color: var(--aqua); margin-bottom: 4px; }
+
+  /* Booking */
+  .booking { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }
+  form { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  form .full { grid-column: 1 / -1; }
+  label { display: grid; gap: 6px; font-size: 13px; font-weight: 700; color: var(--muted); }
+  input, select { font: 16px var(--sans); color: var(--text); padding: 13px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--bg); width: 100%; }
+  input:focus, select:focus { outline: none; border-color: var(--aqua); }
+  form small { color: var(--muted); font-size: 13px; }
+
+  /* FAQ */
+  .faq { max-width: 820px; }
+  details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  summary { cursor: pointer; font-weight: 700; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--aqua); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 10px 0 0; color: var(--muted); }
+
+  /* Reviews */
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .review { background: var(--sand); border-radius: 20px; padding: 28px; }
+  .review .stars { color: #e0a33a; letter-spacing: 2px; }
+  .review p { font-family: var(--serif); font-size: 21px; line-height: 1.3; margin: 12px 0 16px; }
+  .review b { font-size: 14px; }
+
+  /* Find us */
+  .find { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; }
+  .find .map-box { border-radius: 22px; }
+
+  footer { background: var(--sea); color: rgba(255,255,255,.75); padding: 30px 0 96px; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { margin-left: 18px; text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .nav-links { position: fixed; inset: 76px 0 auto 0; flex-direction: column; gap: 0; padding: 8px 16px 20px; background: var(--sea); transform: translateY(-130%); transition: transform .3s; z-index: -1; }
+    .nav-open .nav-links { transform: none; }
+    .nav-open header { background: var(--sea); }
+    .nav-links a { padding: 13px 0; font-size: 18px; }
+    .nav-toggle { display: block; }
+    .fleet, .reviews { grid-template-columns: 1fr; }
+    .incl { grid-template-columns: 1fr 1fr; }
+    .booking, .find { grid-template-columns: 1fr; gap: 36px; }
+    form { grid-template-columns: 1fr; padding: 22px; }
+    .hero-facts { gap: 24px; }
+    section { padding: 72px 0; }
+    footer a { margin: 0 18px 0 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="logo" href="#">Cala <em>Serena</em></a>
+    <div class="nav-links">
+      <a href="#flota"><span lang="es">Flota</span><span lang="en">Fleet</span></a>
+      <a href="#precios"><span lang="es">Precios</span><span lang="en">Prices</span></a>
+      <a href="#reservar"><span lang="es">Reservar</span><span lang="en">Book</span></a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang" type="button" data-lang-toggle>EN</button>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="ph"><span lang="es">Foto: barco en cala (horizontal, grande)</span><span lang="en">Photo: boat in a cove (wide, large)</span></div>
+    <div class="wrap hero-inner">
+      <span class="status" data-open-status>Abierto ahora</span>
+      <h1><span lang="es">Tu día en el mar, <em>a tu ritmo</em></span><span lang="en">Your day at sea, <em>your way</em></span></h1>
+      <p><span lang="es">Barcos con y sin patrón desde el puerto de Sant Antoni. Calas, snorkel y puesta de sol.</span><span lang="en">Boats with or without a skipper from Sant Antoni harbour. Coves, snorkelling and sunsets.</span></p>
+      <div class="actions">
+        <a class="btn btn-white" href="#flota"><span lang="es">Ver barcos</span><span lang="en">See the boats</span></a>
+        <a class="btn btn-glass" data-wa href="#"><span lang="es">Consultar disponibilidad</span><span lang="en">Check availability</span></a>
+      </div>
+      <div class="hero-facts">
+        <div><b>3</b><span lang="es">barcos</span><span lang="en">boats</span></div>
+        <div><b><span lang="es">Sin</span><span lang="en">No</span></b><span lang="es">licencia (hasta 15 CV)</span><span lang="en">licence (up to 15 hp)</span></div>
+        <div><b>4,9★</b><span lang="es">en Google</span><span lang="en">on Google</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="flota">
+    <div class="wrap">
+      <div class="head reveal"><div><p class="eyebrow"><span lang="es">La flota</span><span lang="en">The fleet</span></p><h2><span lang="es">Elige tu barco</span><span lang="en">Choose your boat</span></h2></div></div>
+      <div class="fleet">
+        <article class="boat reveal">
+          <div class="ph"><span>Foto</span></div>
+          <div class="boat-body">
+            <h3>Sirena 450</h3>
+            <div class="specs"><span>4,5 m</span><span><span lang="es">5 personas</span><span lang="en">5 people</span></span><span><span lang="es">Sin licencia</span><span lang="en">No licence</span></span></div>
+            <div class="price"><div><small><span lang="es">desde</span><span lang="en">from</span></small><b>150 €</b><small><span lang="es">/ día</span><span lang="en">/ day</span></small></div><a class="btn btn-line" data-wa href="#" data-wa-es="Hola, quería reservar el Sirena 450 para el día…" data-wa-en="Hi, I'd like to book the Sirena 450 for…"><span lang="es">Reservar</span><span lang="en">Book</span></a></div>
+          </div>
+        </article>
+        <article class="boat reveal">
+          <div class="ph"><span>Foto</span></div>
+          <div class="boat-body">
+            <h3>Llaüt Tradicional</h3>
+            <div class="specs"><span>7 m</span><span><span lang="es">7 personas</span><span lang="en">7 people</span></span><span><span lang="es">Licencia o patrón</span><span lang="en">Licence or skipper</span></span></div>
+            <div class="price"><div><small><span lang="es">desde</span><span lang="en">from</span></small><b>290 €</b><small><span lang="es">/ día</span><span lang="en">/ day</span></small></div><a class="btn btn-line" data-wa href="#" data-wa-es="Hola, quería reservar el Llaüt para el día…" data-wa-en="Hi, I'd like to book the Llaüt for…"><span lang="es">Reservar</span><span lang="en">Book</span></a></div>
+          </div>
+        </article>
+        <article class="boat reveal">
+          <div class="ph"><span>Foto</span></div>
+          <div class="boat-body">
+            <h3>Open 750</h3>
+            <div class="specs"><span>7,5 m</span><span><span lang="es">10 personas</span><span lang="en">10 people</span></span><span><span lang="es">Con patrón</span><span lang="en">With skipper</span></span></div>
+            <div class="price"><div><small><span lang="es">desde</span><span lang="en">from</span></small><b>590 €</b><small><span lang="es">/ día</span><span lang="en">/ day</span></small></div><a class="btn btn-line" data-wa href="#" data-wa-es="Hola, quería reservar el Open 750 para el día…" data-wa-en="Hi, I'd like to book the Open 750 for…"><span lang="es">Reservar</span><span lang="en">Book</span></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" class="seasons">
+    <div class="wrap">
+      <div class="head reveal"><div><p class="eyebrow"><span lang="es">Precios por temporada</span><span lang="en">Seasonal prices</span></p><h2><span lang="es">Claro y sin letra pequeña</span><span lang="en">Clear, no small print</span></h2></div></div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead><tr><th><span lang="es">Barco</span><span lang="en">Boat</span></th><th><span lang="es">Baja</span><span lang="en">Low</span><br><small>abr–may · oct</small></th><th><span lang="es">Media</span><span lang="en">Mid</span><br><small>jun · sep</small></th><th><span lang="es">Alta</span><span lang="en">High</span><br><small>jul–ago</small></th></tr></thead>
+          <tbody>
+            <tr><td>Sirena 450</td><td>150 €</td><td>190 €</td><td>240 €</td></tr>
+            <tr><td>Llaüt Tradicional</td><td>290 €</td><td>350 €</td><td>420 €</td></tr>
+            <tr><td>Open 750 <small>(<span lang="es">con patrón</span><span lang="en">with skipper</span>)</small></td><td>590 €</td><td>690 €</td><td>820 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="incl">
+        <div class="reveal"><b><span lang="es">Incluido</span><span lang="en">Included</span></b><span lang="es">Seguro y IVA</span><span lang="en">Insurance and VAT</span></div>
+        <div class="reveal"><b><span lang="es">Incluido</span><span lang="en">Included</span></b><span lang="es">Snorkel y nevera</span><span lang="en">Snorkel gear and cooler</span></div>
+        <div class="reveal"><b><span lang="es">Aparte</span><span lang="en">Extra</span></b><span lang="es">Combustible según uso</span><span lang="en">Fuel as used</span></div>
+        <div class="reveal"><b><span lang="es">Fianza</span><span lang="en">Deposit</span></b><span lang="es">Reembolsable</span><span lang="en">Refundable</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservar">
+    <div class="wrap booking">
+      <div class="reveal">
+        <p class="eyebrow"><span lang="es">Reservar</span><span lang="en">Book</span></p>
+        <h2 style="font-size:clamp(38px,5.5vw,60px);margin:10px 0 18px"><span lang="es">Pide tu día de barco</span><span lang="en">Request your boat day</span></h2>
+        <p style="color:var(--muted);font-size:17px"><span lang="es">Te respondemos por WhatsApp con disponibilidad y precio final. La reserva se confirma con una señal.</span><span lang="en">We reply on WhatsApp with availability and the final price. Your booking is confirmed with a deposit.</span></p>
+      </div>
+      <form class="reveal" data-wa-form data-wa-es="Hola Cala Serena, solicitud de reserva:" data-wa-en="Hi Cala Serena, booking request:">
+        <label for="b-boat" class="full"><span lang="es">Barco</span><span lang="en">Boat</span>
+          <select id="b-boat" name="barco">
+            <option>Sirena 450</option>
+            <option>Llaüt Tradicional</option>
+            <option>Open 750</option>
+            <option data-es="Aún no lo sé" data-en="Not sure yet">Aún no lo sé</option>
+          </select>
+        </label>
+        <label for="b-date"><span lang="es">Fecha</span><span lang="en">Date</span><input id="b-date" name="fecha" type="date" required></label>
+        <label for="b-people"><span lang="es">Personas</span><span lang="en">People</span><input id="b-people" name="personas" type="number" min="1" max="12" value="2"></label>
+        <label for="b-skipper" class="full"><span lang="es">Patrón</span><span lang="en">Skipper</span>
+          <select id="b-skipper" name="patron">
+            <option data-es="Sin patrón (tengo licencia o barco sin licencia)" data-en="No skipper (I have a licence or licence-free boat)">Sin patrón (tengo licencia o barco sin licencia)</option>
+            <option data-es="Con patrón" data-en="With skipper">Con patrón</option>
+          </select>
+        </label>
+        <label for="b-name" class="full"><span lang="es">Nombre</span><span lang="en">Name</span><input id="b-name" name="nombre" autocomplete="given-name" required></label>
+        <button class="btn btn-sea full" type="submit"><span lang="es">Enviar por WhatsApp</span><span lang="en">Send on WhatsApp</span></button>
+        <small class="full"><span lang="es">Esta web no guarda tus datos: el mensaje se envía desde tu WhatsApp.</span><span lang="en">This site stores nothing: the message is sent from your own WhatsApp.</span></small>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq" style="background:#fff;border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="head reveal"><div><p class="eyebrow">FAQ</p><h2><span lang="es">Preguntas frecuentes</span><span lang="en">Common questions</span></h2></div></div>
+      <!-- EDIT: confirm every answer with the client (licence rules, fuel, deposit, cancellation). -->
+      <div class="faq">
+        <details class="reveal"><summary><span lang="es">¿Necesito licencia?</span><span lang="en">Do I need a licence?</span></summary><p><span lang="es">El Sirena 450 se puede llevar sin licencia. Para los demás necesitas titulación náutica o contratar patrón.</span><span lang="en">The Sirena 450 can be driven without a licence. For the others you need a boating licence or a skipper.</span></p></details>
+        <details class="reveal"><summary><span lang="es">¿Qué pasa si hace mal tiempo?</span><span lang="en">What if the weather is bad?</span></summary><p><span lang="es">Si no se puede salir por seguridad, cambiamos la fecha o te devolvemos la señal.</span><span lang="en">If it's not safe to go out, we move the date or refund your deposit.</span></p></details>
+        <details class="reveal"><summary><span lang="es">¿El combustible está incluido?</span><span lang="en">Is fuel included?</span></summary><p><span lang="es">No, se paga según el consumo al volver. Te damos una estimación antes de salir.</span><span lang="en">No, you pay for what you use when you return. We give you an estimate before you leave.</span></p></details>
+        <details class="reveal"><summary><span lang="es">¿Dónde se recoge el barco?</span><span lang="en">Where do we pick up the boat?</span></summary><p><span lang="es">En el puerto de Sant Antoni. Te mandamos la ubicación exacta por WhatsApp.</span><span lang="en">At Sant Antoni harbour. We'll send the exact location on WhatsApp.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head reveal"><div><p class="eyebrow"><span lang="es">Opiniones en Google</span><span lang="en">Google reviews</span></p><h2><span lang="es">Días que se recuerdan</span><span lang="en">Days to remember</span></h2></div></div>
+      <!-- EDIT: copy 3 real Google reviews (first name + initial only). -->
+      <div class="reviews">
+        <div class="review reveal"><div class="stars">★★★★★</div><p><span lang="es">“Barco impecable y nos recomendaron calas sin gente.”</span><span lang="en">“Spotless boat, and they recommended quiet coves.”</span></p><b>Hannah K.</b></div>
+        <div class="review reveal"><div class="stars">★★★★★</div><p><span lang="es">“El patrón, un crack. La puesta de sol desde el mar, increíble.”</span><span lang="en">“Great skipper. Sunset from the sea was unreal.”</span></p><b>Diego S.</b></div>
+        <div class="review reveal"><div class="stars">★★★★★</div><p><span lang="es">“Reserva rápida por WhatsApp, todo claro desde el principio.”</span><span lang="en">“Quick booking on WhatsApp, everything clear from the start.”</span></p><b>Claire D.</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap find">
+      <div class="reveal">
+        <p class="eyebrow"><span lang="es">Dónde estamos</span><span lang="en">Find us</span></p>
+        <h2 style="font-size:clamp(38px,5.5vw,60px);margin:10px 0 18px"><span lang="es">Puerto de Sant Antoni</span><span lang="en">Sant Antoni harbour</span></h2>
+        <ul data-hours></ul>
+        <p style="color:var(--muted);margin-top:14px"><span lang="es">Temporada: abril a octubre. En invierno, contacto por WhatsApp.</span><span lang="en">Season: April to October. In winter, contact us on WhatsApp.</span></p>
+        <div class="actions" style="margin-top:24px">
+          <a class="btn btn-sea" data-wa href="#">WhatsApp</a>
+          <a class="btn btn-line" data-directions href="#"><span lang="es">Cómo llegar</span><span lang="en">Directions</span></a>
+        </div>
+      </div>
+      <div class="map-box reveal" data-map>
+        <div class="map-consent">
+          <strong><span lang="es">Mapa de Google</span><span lang="en">Google Map</span></strong>
+          <small><span lang="es">Al cargar el mapa, Google puede usar cookies.</span><span lang="en">Loading the map lets Google set cookies.</span></small>
+          <button class="btn btn-sea" type="button" style="justify-self:center"><span lang="es">Cargar mapa</span><span lang="en">Load map</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Cala Serena Boats · Sant Antoni, Ibiza</span>
+    <span>
+      <a href="#" data-open-legal="aviso"><span lang="es">Aviso legal</span><span lang="en">Legal notice</span></a>
+      <a href="#" data-open-legal="privacidad"><span lang="es">Privacidad</span><span lang="en">Privacy</span></a>
+      <a href="#" data-open-legal="cookies">Cookies</a>
+    </span>
+  </div>
+</footer>
+<script>
+  // Solid header after scrolling past the hero
+  (function () {
+    var h = document.querySelector('header');
+    function onScroll() { h.classList.toggle('solid', window.scrollY > 40); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+<!-- Legal pages (LSSI-CE + RGPD). Fill every highlighted [placeholder] per client.
+     Starting text only: have the client's gestoría/lawyer check it. -->
+<dialog class="legal" id="legal" aria-label="Legal">
+  <div class="legal-bar"><button type="button" data-close-legal><span lang="es">Cerrar</span><span lang="en">Close</span></button></div>
+  <div class="legal-inner">
+    <div lang="es">
+      <h2 id="aviso">Aviso legal</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa:</p>
+      <ul>
+        <li>Titular: <span class="ph-note">[Nombre y apellidos o razón social]</span></li>
+        <li>NIF/CIF: <span class="ph-note">[NIF]</span></li>
+        <li>Domicilio: <span class="ph-note">[Dirección completa, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Teléfono: <span data-tel-text></span></li>
+        <li><span class="ph-note">[Si es sociedad: datos del Registro Mercantil]</span></li>
+      </ul>
+      <p>Los textos, fotos y logotipos de esta web pertenecen a su titular o se usan con permiso. No se permite su reproducción sin autorización.</p>
+
+      <h2 id="privacidad">Política de privacidad</h2>
+      <h3>Responsable</h3>
+      <p>El titular indicado en el aviso legal.</p>
+      <h3>Qué datos tratamos</h3>
+      <p>Esta web no tiene formularios que guarden datos. Los botones y formularios abren WhatsApp con un mensaje ya escrito; tú decides si lo envías. Si nos contactas por WhatsApp, teléfono o email, usamos tu nombre, teléfono y lo que nos cuentes solo para responderte y gestionar tu petición.</p>
+      <h3>Base legal y conservación</h3>
+      <p>Tu consentimiento al contactarnos y, en su caso, la aplicación de medidas precontractuales (art. 6.1.a y 6.1.b RGPD). Conservamos los datos el tiempo necesario para atenderte y cumplir obligaciones legales.</p>
+      <h3>Terceros</h3>
+      <p>No cedemos tus datos salvo obligación legal. WhatsApp (Meta) trata los mensajes según su propia política de privacidad. La web está alojada en <span class="ph-note">[proveedor de hosting]</span>.</p>
+      <h3>Tus derechos</h3>
+      <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <span class="ph-note">[email]</span>. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+
+      <h2 id="cookies">Cookies</h2>
+      <p>Esta web no usa cookies propias ni herramientas de analítica. Solo guarda en tu navegador el idioma que eliges, y ese dato no sale de tu dispositivo. El mapa de Google solo se carga si pulsas «Cargar mapa». A partir de ese momento Google puede instalar cookies según su propia política.</p>
+    </div>
+
+    <div lang="en">
+      <h2 id="aviso-en">Legal notice</h2>
+      <p>As required by article 10 of Spanish Law 34/2002 (LSSI-CE):</p>
+      <ul>
+        <li>Owner: <span class="ph-note">[Full name or company name]</span></li>
+        <li>Tax ID (NIF/CIF): <span class="ph-note">[NIF]</span></li>
+        <li>Address: <span class="ph-note">[Full address, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Phone: <span data-tel-text></span></li>
+        <li><span class="ph-note">[If a company: Mercantile Registry details]</span></li>
+      </ul>
+      <p>The text, photos and logos on this site belong to the owner or are used with permission. Please don't reproduce them without authorisation.</p>
+
+      <h2 id="privacidad-en">Privacy policy</h2>
+      <h3>Controller</h3>
+      <p>The owner named in the legal notice.</p>
+      <h3>What data we process</h3>
+      <p>This website has no forms that store data. Buttons and forms open WhatsApp with a pre-written message, and you decide whether to send it. If you contact us by WhatsApp, phone or email, we use your name, number and message only to reply and handle your request.</p>
+      <h3>Legal basis and retention</h3>
+      <p>Your consent when you contact us and, where relevant, pre-contractual steps (art. 6.1.a and 6.1.b GDPR). We keep data only as long as needed to help you and to meet legal obligations.</p>
+      <h3>Third parties</h3>
+      <p>We don't share your data unless the law requires it. WhatsApp (Meta) processes messages under its own privacy policy. This site is hosted by <span class="ph-note">[hosting provider]</span>.</p>
+      <h3>Your rights</h3>
+      <p>You can request access, correction, deletion, objection, restriction and portability by writing to <span class="ph-note">[email]</span>. You can also complain to the Spanish Data Protection Agency (aepd.es).</p>
+
+      <h2 id="cookies-en">Cookies</h2>
+      <p>This site uses no cookies of its own and no analytics. It only remembers your chosen language in your browser, and that never leaves your device. The Google map loads only if you tap "Load map". From then on, Google may set cookies under its own policy.</p>
+    </div>
+  </div>
+</dialog>
+<a class="wa-float" data-wa href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="site.js"></script>
+
+
+<style>
+  .demo-pill { position: fixed; left: 16px; bottom: 16px; z-index: 70; max-width: calc(100% - 104px); background: rgba(20,20,20,.88); color: #fff; font: 12px/1.4 system-ui, sans-serif; padding: 8px 12px; border-radius: 12px; }
+  .demo-pill a { color: #fff; font-weight: 700; }
+  @media (max-width: 900px) { body:has(.callbar) .demo-pill { bottom: 72px; } }
+</style>
+<div class="demo-pill">
+  <span lang="es"><b>Demo</b> · negocio ficticio. Los botones de WhatsApp escriben a Gee. <a href="../">Más demos</a></span>
+  <span lang="en"><b>Demo</b> · fictional business. WhatsApp buttons message Gee. <a href="../">More demos</a></span>
+</div>
+</body>
+</html>

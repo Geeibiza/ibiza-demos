@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aiguafix · Fontanero en Ibiza · Urgencias y reparaciones</title>
+<meta name="description" content="Fontanería en toda Ibiza: averías, fugas, desatascos, calentadores y reformas de baño. Presupuesto gratis por WhatsApp.">
+<meta property="og:title" content="Aiguafix · Fontanero en Ibiza">
+<meta property="og:description" content="Averías, fugas, desatascos y calentadores. Presupuesto gratis por WhatsApp.">
+<meta name="theme-color" content="#0f1b2d">
+<script>document.documentElement.classList.add('js')</script>
+<!-- EDIT: business details. Opening hours here drive the "Open now" badge and hours list. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Aiguafix",
+  "telephone": "+34 634 852 119",
+  "areaServed": "Ibiza",
+  "address": { "@type": "PostalAddress", "streetAddress": "Carrer de l'Exemple, 3", "addressLocality": "Eivissa", "postalCode": "07800", "addressRegion": "Illes Balears", "addressCountry": "ES" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ]
+}
+</script>
+<script>
+  window.SITE = {
+    whatsapp: "34634852119",
+    phone: "+34 634 852 119",
+    mapQuery: "Carrer de l'Exemple 3, Eivissa, Ibiza",
+    waText: { es: "Hola Aiguafix, necesito un fontanero para…", en: "Hi Aiguafix, I need a plumber for…" }
+  };
+</script>
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="base.css">
+<style>
+  @font-face { font-family: "Archivo"; src: url(fonts/archivo-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
+
+  :root {
+    --navy: #0f1b2d; --navy-2: #172840; --yellow: #ffc629; --white: #fff; --bg: #f3f5f8; --text: #13202f; --muted: #5a6778;
+    --line: rgba(15,27,45,.12); --font: "Archivo", system-ui, sans-serif; --map-bg: #dfe5ec;
+  }
+  body { background: var(--bg); color: var(--text); font: 16px/1.6 var(--font); }
+  .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+  h1, h2, h3 { margin: 0; line-height: 1; font-weight: 800; letter-spacing: -.02em; font-stretch: 112%; }
+  .kicker { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 24px; border-radius: 10px; font-weight: 800; font-size: 16px; text-decoration: none; border: 2px solid transparent; transition: transform .15s, background .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn svg { width: 20px; height: 20px; }
+  .btn-y { background: var(--yellow); color: var(--navy); }
+  .btn-wa { background: #25D366; color: #fff; }
+  .btn-o { border-color: currentColor; color: inherit; }
+
+  .topbar { background: var(--yellow); color: var(--navy); font-weight: 700; font-size: 14px; text-align: center; padding: 9px 16px; }
+  .topbar a { font-weight: 800; }
+  header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 40; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 22px; text-decoration: none; font-stretch: 115%; }
+  .logo i { width: 34px; height: 34px; border-radius: 8px; background: var(--yellow); display: grid; place-items: center; color: var(--navy); font-style: normal; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { text-decoration: none; font-weight: 600; opacity: .85; }
+  .nav-links a:hover { opacity: 1; color: var(--yellow); }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .nav-right .btn { padding: 10px 16px; font-size: 15px; }
+  .lang { background: none; color: #fff; border: 1.5px solid rgba(255,255,255,.4); border-radius: 8px; padding: 8px 10px; font-weight: 700; font-size: 13px; }
+
+  /* Hero */
+  .hero { background: var(--navy); color: var(--white); padding: 56px 0 0; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: end; }
+  .hero h1 { font-size: clamp(44px, 7vw, 88px); }
+  .hero h1 mark { background: none; color: var(--yellow); }
+  .hero p { font-size: 19px; opacity: .85; max-width: 44ch; margin: 22px 0 30px; }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; padding-bottom: 56px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.08); border-radius: 999px; padding: 7px 14px; font-size: 14px; font-weight: 700; margin-bottom: 22px; }
+  .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #999; }
+  .status.is-open::before { background: #3fd07a; box-shadow: 0 0 0 4px rgba(63,208,122,.2); }
+  .status.is-closed::before { background: var(--yellow); }
+  .hero .ph { aspect-ratio: 4 / 5; border-radius: 18px 18px 0 0; --ph: linear-gradient(160deg, #2b4466, #172840); }
+  .trust { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--navy-2); color: #fff; }
+  .trust div { padding: 22px 20px; border-left: 1px solid rgba(255,255,255,.08); }
+  .trust div:first-child { border-left: 0; }
+  .trust b { display: block; font-size: 28px; color: var(--yellow); font-stretch: 115%; }
+  .trust div > span { font-size: 14px; opacity: .8; }
+
+  section { padding: 96px 0; }
+  .head { max-width: 680px; margin-bottom: 44px; }
+  .head h2 { font-size: clamp(34px, 5vw, 56px); margin-top: 10px; }
+
+  /* Services */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px; transition: border-color .2s, transform .2s; }
+  .card:hover { border-color: var(--navy); transform: translateY(-3px); }
+  .ico { width: 48px; height: 48px; border-radius: 12px; background: var(--yellow); display: grid; place-items: center; margin-bottom: 18px; }
+  .ico svg { width: 24px; height: 24px; }
+  .card h3 { font-size: 22px; margin-bottom: 8px; font-stretch: 105%; }
+  .card p { margin: 0; color: var(--muted); }
+
+  /* Urgent banner */
+  .urgent { background: var(--yellow); color: var(--navy); border-radius: 20px; padding: 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .urgent h2 { font-size: clamp(28px, 4vw, 44px); }
+  .urgent p { margin: 8px 0 0; font-weight: 600; }
+  .urgent .btn-n { background: var(--navy); color: #fff; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; }
+  .step { border-top: 3px solid var(--navy); padding-top: 22px; }
+  .step::before { counter-increment: s; content: "0" counter(s); font-weight: 900; font-size: 15px; color: var(--muted); display: block; margin-bottom: 10px; }
+  .step h3 { font-size: 22px; margin-bottom: 8px; }
+  .step p { margin: 0; color: var(--muted); }
+
+  /* Areas + quote */
+  .quote { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .areas { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 28px; }
+  .areas span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 15px; }
+  form { background: var(--navy); color: #fff; border-radius: 20px; padding: 32px; display: grid; gap: 14px; }
+  form h3 { font-size: 26px; margin-bottom: 4px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 700; }
+  input, select, textarea { font: 16px var(--font); padding: 13px 14px; border-radius: 10px; border: 1.5px solid rgba(255,255,255,.18); background: var(--navy-2); color: #fff; width: 100%; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--yellow); }
+  textarea { min-height: 96px; resize: vertical; }
+  form small { opacity: .7; font-size: 13px; }
+
+  /* Reviews */
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .review { background: #fff; border-radius: 16px; padding: 26px; border: 1px solid var(--line); }
+  .review .stars { color: #f0a500; letter-spacing: 2px; }
+  .review p { margin: 12px 0 14px; font-size: 17px; }
+  .review b { font-size: 14px; }
+
+  /* Contact */
+  .contact { background: var(--navy); color: #fff; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .contact .kicker { color: rgba(255,255,255,.6); }
+  .contact h2 { font-size: clamp(34px, 5vw, 56px); margin: 10px 0 22px; }
+  .contact [data-hours] { --line: rgba(255,255,255,.12); }
+  .contact .map-box { border-radius: 18px; --map-bg: #1c2f4a; }
+  .contact .map-consent small { color: #fff; }
+  .big-tel { font-size: clamp(30px, 4vw, 44px); font-weight: 900; color: var(--yellow); text-decoration: none; display: inline-block; margin: 6px 0 22px; font-stretch: 112%; }
+
+  footer { background: #0a1422; color: rgba(255,255,255,.65); padding: 28px 0 96px; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { margin-left: 18px; text-decoration: none; }
+  footer a:hover { color: var(--yellow); }
+
+  /* Mobile sticky call bar */
+  .callbar { display: none; }
+
+  @media (max-width: 900px) {
+    .nav-links { position: fixed; inset: 72px 0 auto 0; flex-direction: column; gap: 0; padding: 8px 16px 20px; background: var(--navy); transform: translateY(-130%); transition: transform .3s; z-index: -1; }
+    .nav-open .nav-links { transform: none; }
+    .nav-links a { padding: 13px 0; font-size: 18px; }
+    .nav-toggle { display: block; }
+    .nav-right .btn { display: none; }
+    .hero-grid, .quote, .contact-grid { grid-template-columns: 1fr; }
+    .hero .ph { display: none; }
+    .trust { grid-template-columns: repeat(2, 1fr); }
+    .trust div:nth-child(3) { border-left: 0; }
+    .trust div { border-top: 1px solid rgba(255,255,255,.08); }
+    .cards, .steps, .reviews { grid-template-columns: 1fr; }
+    .urgent { padding: 28px; }
+    section { padding: 72px 0; }
+    footer a { margin: 0 18px 0 0; }
+    .wa-float { display: none; }
+    .callbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; box-shadow: 0 -6px 20px rgba(0,0,0,.2); }
+    .callbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-weight: 800; text-decoration: none; }
+    .callbar svg { width: 20px; height: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span lang="es">Urgencias en toda Ibiza</span><span lang="en">Emergencies all over Ibiza</span> · <a data-tel href="#"><span data-tel-text></span></a></div>
+<header>
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="logo" href="#"><i>A</i>Aiguafix</a>
+    <div class="nav-links">
+      <a href="#servicios"><span lang="es">Servicios</span><span lang="en">Services</span></a>
+      <a href="#presupuesto"><span lang="es">Presupuesto</span><span lang="en">Quote</span></a>
+      <a href="#opiniones"><span lang="es">Opiniones</span><span lang="en">Reviews</span></a>
+      <a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+    </div>
+    <div class="nav-right">
+      <button class="lang" type="button" data-lang-toggle>EN</button>
+      <a class="btn btn-y" data-tel href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span lang="es">Llamar</span><span lang="en">Call</span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="status" data-open-status>Abierto ahora</span>
+        <h1><span lang="es">Tu fontanero en Ibiza, <mark>hoy mismo</mark></span><span lang="en">Your Ibiza plumber, <mark>today</mark></span></h1>
+        <p><span lang="es">Fugas, averías, desatascos y calentadores. Presupuesto gratis y precio cerrado antes de empezar.</span><span lang="en">Leaks, breakdowns, blocked drains and water heaters. Free quote and a fixed price before we start.</span></p>
+        <div class="actions">
+          <a class="btn btn-y" data-tel href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-tel-text></span></a>
+          <a class="btn btn-wa" data-wa href="#"><span lang="es">WhatsApp con foto</span><span lang="en">WhatsApp a photo</span></a>
+        </div>
+      </div>
+      <div class="ph reveal"><span lang="es">Foto: tú trabajando / furgoneta</span><span lang="en">Photo: you at work / van</span></div>
+    </div>
+    <div class="wrap trust">
+      <div><b>15+</b><span lang="es">años en Ibiza</span><span lang="en">years in Ibiza</span></div>
+      <div><b>24 h</b><span lang="es">respuesta máxima</span><span lang="en">max response</span></div>
+      <div><b>1 <span lang="es">año</span><span lang="en">year</span></b><span lang="es">de garantía</span><span lang="en">guarantee</span></div>
+      <div><b>4,8★</b><span lang="es">en Google</span><span lang="en">on Google</span></div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="head reveal"><span class="kicker"><span lang="es">Servicios</span><span lang="en">Services</span></span><h2><span lang="es">Lo arreglamos, lo dejamos limpio</span><span lang="en">We fix it and leave it clean</span></h2></div>
+      <div class="cards">
+        <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/></svg></div><h3><span lang="es">Fugas y averías</span><span lang="en">Leaks &amp; breakdowns</span></h3><p><span lang="es">Localizamos la fuga sin romper de más y la reparamos en la misma visita.</span><span lang="en">We find the leak without unnecessary damage and fix it on the same visit.</span></p></div>
+        <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM8 10v10M16 10v10M6 20h12"/></svg></div><h3><span lang="es">Desatascos</span><span lang="en">Blocked drains</span></h3><p><span lang="es">Fregaderos, baños y bajantes, con máquina profesional.</span><span lang="en">Sinks, toilets and downpipes, with professional equipment.</span></p></div>
+        <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M12 8v5M10 17h4"/></svg></div><h3><span lang="es">Calentadores y termos</span><span lang="en">Water heaters</span></h3><p><span lang="es">Instalación, cambio y reparación de termos eléctricos y de gas.</span><span lang="en">Installation, replacement and repair of electric and gas heaters.</span></p></div>
+        <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0"/></svg></div><h3><span lang="es">Reformas de baño</span><span lang="en">Bathroom refits</span></h3><p><span lang="es">Cambio de bañera por plato de ducha, sanitarios y grifería.</span><span lang="en">Bath-to-shower conversions, toilets and taps.</span></p></div>
+        <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/></svg></div><h3><span lang="es">Villas y alquileres</span><span lang="en">Villas &amp; rentals</span></h3><p><span lang="es">Mantenimiento para propietarios y gestores, antes y durante la temporada.</span><span lang="en">Maintenance for owners and managers, before and during the season.</span></p></div>
+        <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3><span lang="es">Urgencias</span><span lang="en">Emergencies</span></h3><p><span lang="es">Si es urgente, llámanos y te decimos al momento cuándo podemos ir.</span><span lang="en">If it's urgent, call and we'll tell you right away when we can come.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap reveal">
+    <div class="urgent">
+      <div><h2><span lang="es">¿Se te inunda la casa?</span><span lang="en">Is your home flooding?</span></h2><p><span lang="es">Cierra la llave de paso y llámanos.</span><span lang="en">Turn off the main water valve and call us.</span></p></div>
+      <a class="btn btn-n" data-tel href="#"><span data-tel-text></span></a>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="head reveal"><span class="kicker"><span lang="es">Cómo trabajamos</span><span lang="en">How it works</span></span><h2><span lang="es">Sin sorpresas en la factura</span><span lang="en">No surprises on the bill</span></h2></div>
+      <div class="steps">
+        <div class="step reveal"><h3><span lang="es">Nos mandas una foto</span><span lang="en">Send us a photo</span></h3><p><span lang="es">Por WhatsApp, con tu zona y el problema.</span><span lang="en">On WhatsApp, with your area and the problem.</span></p></div>
+        <div class="step reveal"><h3><span lang="es">Precio cerrado</span><span lang="en">Fixed price</span></h3><p><span lang="es">Te damos presupuesto antes de empezar.</span><span lang="en">You get a quote before any work starts.</span></p></div>
+        <div class="step reveal"><h3><span lang="es">Trabajo con garantía</span><span lang="en">Guaranteed work</span></h3><p><span lang="es">Factura y un año de garantía en la mano de obra.</span><span lang="en">Invoice and a one-year labour guarantee.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="presupuesto" style="background:#fff;border-block:1px solid var(--line)">
+    <div class="wrap quote">
+      <div class="reveal">
+        <span class="kicker"><span lang="es">Zonas</span><span lang="en">Areas</span></span>
+        <h2 style="font-size:clamp(34px,5vw,56px);margin-top:10px"><span lang="es">Trabajamos en toda la isla</span><span lang="en">We cover the whole island</span></h2>
+        <div class="areas"><span>Eivissa</span><span>Sant Antoni</span><span>Santa Eulària</span><span>Sant Josep</span><span>Sant Joan</span><span>Formentera*</span></div>
+        <p style="color:var(--muted)"><span lang="es">*Formentera bajo consulta.</span><span lang="en">*Formentera on request.</span></p>
+      </div>
+      <form class="reveal" data-wa-form data-wa-es="Hola Aiguafix, pido presupuesto:" data-wa-en="Hi Aiguafix, I'd like a quote:">
+        <h3><span lang="es">Presupuesto gratis</span><span lang="en">Free quote</span></h3>
+        <label for="q-type"><span lang="es">¿Qué necesitas?</span><span lang="en">What do you need?</span>
+          <select id="q-type" name="tipo">
+            <option data-es="Fuga / avería" data-en="Leak / breakdown">Fuga / avería</option>
+            <option data-es="Desatasco" data-en="Blocked drain">Desatasco</option>
+            <option data-es="Calentador / termo" data-en="Water heater">Calentador / termo</option>
+            <option data-es="Reforma de baño" data-en="Bathroom refit">Reforma de baño</option>
+            <option data-es="Otro" data-en="Other">Otro</option>
+          </select>
+        </label>
+        <label for="q-zone"><span lang="es">Zona</span><span lang="en">Area</span><input id="q-zone" name="zona" data-es-placeholder="Ej. Sant Antoni" data-en-placeholder="E.g. Sant Antoni"></label>
+        <label for="q-msg"><span lang="es">Cuéntanos el problema</span><span lang="en">Describe the problem</span><textarea id="q-msg" name="detalle"></textarea></label>
+        <button class="btn btn-y" type="submit"><span lang="es">Enviar por WhatsApp</span><span lang="en">Send on WhatsApp</span></button>
+        <small><span lang="es">Puedes añadir fotos en WhatsApp. Esta web no guarda tus datos.</span><span lang="en">You can add photos in WhatsApp. This site stores nothing.</span></small>
+      </form>
+    </div>
+  </section>
+
+  <section id="opiniones">
+    <div class="wrap">
+      <div class="head reveal"><span class="kicker"><span lang="es">Opiniones en Google</span><span lang="en">Google reviews</span></span><h2><span lang="es">Clientes que repiten</span><span lang="en">Customers who come back</span></h2></div>
+      <!-- EDIT: copy 3 real Google reviews (first name + initial only). -->
+      <div class="reviews">
+        <div class="review reveal"><div class="stars">★★★★★</div><p><span lang="es">“Vino en una hora un domingo y me salvó la cocina.”</span><span lang="en">“Came within an hour on a Sunday and saved my kitchen.”</span></p><b>Pep T.</b></div>
+        <div class="review reveal"><div class="stars">★★★★★</div><p><span lang="es">“Precio cerrado y cumplido. Muy limpio trabajando.”</span><span lang="en">“Fixed price, as promised. Very tidy work.”</span></p><b>James W.</b></div>
+        <div class="review reveal"><div class="stars">★★★★★</div><p><span lang="es">“Nos lleva el mantenimiento de tres villas. Siempre responde.”</span><span lang="en">“Handles maintenance for our three villas. Always answers.”</span></p><b>Nuria F.</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="kicker"><span lang="es">Contacto</span><span lang="en">Contact</span></span>
+        <h2><span lang="es">Llámanos o escríbenos</span><span lang="en">Call or message us</span></h2>
+        <a class="big-tel" data-tel href="#"><span data-tel-text></span></a>
+        <ul data-hours></ul>
+        <p style="opacity:.7;margin-top:18px"><span lang="es">Urgencias fuera de horario: llama y te decimos si podemos ir.</span><span lang="en">Out-of-hours emergencies: call and we'll tell you if we can come.</span></p>
+      </div>
+      <div class="map-box reveal" data-map>
+        <div class="map-consent">
+          <strong><span lang="es">Mapa de Google</span><span lang="en">Google Map</span></strong>
+          <small><span lang="es">Al cargar el mapa, Google puede usar cookies.</span><span lang="en">Loading the map lets Google set cookies.</span></small>
+          <button class="btn btn-y" type="button"><span lang="es">Cargar mapa</span><span lang="en">Load map</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Aiguafix · <span lang="es">Fontanería en Ibiza</span><span lang="en">Plumbing in Ibiza</span></span>
+    <span>
+      <a href="#" data-open-legal="aviso"><span lang="es">Aviso legal</span><span lang="en">Legal notice</span></a>
+      <a href="#" data-open-legal="privacidad"><span lang="es">Privacidad</span><span lang="en">Privacy</span></a>
+      <a href="#" data-open-legal="cookies">Cookies</a>
+    </span>
+  </div>
+</footer>
+<div class="callbar">
+  <a data-tel href="#" style="background:var(--yellow);color:var(--navy)"><span lang="es">Llamar</span><span lang="en">Call</span></a>
+  <a data-wa href="#" style="background:#25D366;color:#fff">WhatsApp</a>
+</div>
+<!-- Legal pages (LSSI-CE + RGPD). Fill every highlighted [placeholder] per client.
+     Starting text only: have the client's gestoría/lawyer check it. -->
+<dialog class="legal" id="legal" aria-label="Legal">
+  <div class="legal-bar"><button type="button" data-close-legal><span lang="es">Cerrar</span><span lang="en">Close</span></button></div>
+  <div class="legal-inner">
+    <div lang="es">
+      <h2 id="aviso">Aviso legal</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa:</p>
+      <ul>
+        <li>Titular: <span class="ph-note">[Nombre y apellidos o razón social]</span></li>
+        <li>NIF/CIF: <span class="ph-note">[NIF]</span></li>
+        <li>Domicilio: <span class="ph-note">[Dirección completa, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Teléfono: <span data-tel-text></span></li>
+        <li><span class="ph-note">[Si es sociedad: datos del Registro Mercantil]</span></li>
+      </ul>
+      <p>Los textos, fotos y logotipos de esta web pertenecen a su titular o se usan con permiso. No se permite su reproducción sin autorización.</p>
+
+      <h2 id="privacidad">Política de privacidad</h2>
+      <h3>Responsable</h3>
+      <p>El titular indicado en el aviso legal.</p>
+      <h3>Qué datos tratamos</h3>
+      <p>Esta web no tiene formularios que guarden datos. Los botones y formularios abren WhatsApp con un mensaje ya escrito; tú decides si lo envías. Si nos contactas por WhatsApp, teléfono o email, usamos tu nombre, teléfono y lo que nos cuentes solo para responderte y gestionar tu petición.</p>
+      <h3>Base legal y conservación</h3>
+      <p>Tu consentimiento al contactarnos y, en su caso, la aplicación de medidas precontractuales (art. 6.1.a y 6.1.b RGPD). Conservamos los datos el tiempo necesario para atenderte y cumplir obligaciones legales.</p>
+      <h3>Terceros</h3>
+      <p>No cedemos tus datos salvo obligación legal. WhatsApp (Meta) trata los mensajes según su propia política de privacidad. La web está alojada en <span class="ph-note">[proveedor de hosting]</span>.</p>
+      <h3>Tus derechos</h3>
+      <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <span class="ph-note">[email]</span>. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+
+      <h2 id="cookies">Cookies</h2>
+      <p>Esta web no usa cookies propias ni herramientas de analítica. Solo guarda en tu navegador el idioma que eliges, y ese dato no sale de tu dispositivo. El mapa de Google solo se carga si pulsas «Cargar mapa». A partir de ese momento Google puede instalar cookies según su propia política.</p>
+    </div>
+
+    <div lang="en">
+      <h2 id="aviso-en">Legal notice</h2>
+      <p>As required by article 10 of Spanish Law 34/2002 (LSSI-CE):</p>
+      <ul>
+        <li>Owner: <span class="ph-note">[Full name or company name]</span></li>
+        <li>Tax ID (NIF/CIF): <span class="ph-note">[NIF]</span></li>
+        <li>Address: <span class="ph-note">[Full address, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Phone: <span data-tel-text></span></li>
+        <li><span class="ph-note">[If a company: Mercantile Registry details]</span></li>
+      </ul>
+      <p>The text, photos and logos on this site belong to the owner or are used with permission. Please don't reproduce them without authorisation.</p>
+
+      <h2 id="privacidad-en">Privacy policy</h2>
+      <h3>Controller</h3>
+      <p>The owner named in the legal notice.</p>
+      <h3>What data we process</h3>
+      <p>This website has no forms that store data. Buttons and forms open WhatsApp with a pre-written message, and you decide whether to send it. If you contact us by WhatsApp, phone or email, we use your name, number and message only to reply and handle your request.</p>
+      <h3>Legal basis and retention</h3>
+      <p>Your consent when you contact us and, where relevant, pre-contractual steps (art. 6.1.a and 6.1.b GDPR). We keep data only as long as needed to help you and to meet legal obligations.</p>
+      <h3>Third parties</h3>
+      <p>We don't share your data unless the law requires it. WhatsApp (Meta) processes messages under its own privacy policy. This site is hosted by <span class="ph-note">[hosting provider]</span>.</p>
+      <h3>Your rights</h3>
+      <p>You can request access, correction, deletion, objection, restriction and portability by writing to <span class="ph-note">[email]</span>. You can also complain to the Spanish Data Protection Agency (aepd.es).</p>
+
+      <h2 id="cookies-en">Cookies</h2>
+      <p>This site uses no cookies of its own and no analytics. It only remembers your chosen language in your browser, and that never leaves your device. The Google map loads only if you tap "Load map". From then on, Google may set cookies under its own policy.</p>
+    </div>
+  </div>
+</dialog>
+<a class="wa-float" data-wa href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="site.js"></script>
+
+
+<style>
+  .demo-pill { position: fixed; left: 16px; bottom: 16px; z-index: 70; max-width: calc(100% - 104px); background: rgba(20,20,20,.88); color: #fff; font: 12px/1.4 system-ui, sans-serif; padding: 8px 12px; border-radius: 12px; }
+  .demo-pill a { color: #fff; font-weight: 700; }
+  @media (max-width: 900px) { body:has(.callbar) .demo-pill { bottom: 72px; } }
+</style>
+<div class="demo-pill">
+  <span lang="es"><b>Demo</b> · negocio ficticio. Los botones de WhatsApp escriben a Gee. <a href="../">Más demos</a></span>
+  <span lang="en"><b>Demo</b> · fictional business. WhatsApp buttons message Gee. <a href="../">More demos</a></span>
+</div>
+</body>
+</html>

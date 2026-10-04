@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gee Van D · Demos de webs para negocios de Ibiza</title>
+<meta name="description" content="Ejemplos de webs para negocios locales de Ibiza: café, salón de belleza, oficios y alquiler de barcos.">
+<style>
+  @font-face { font-family: "Fraunces"; src: url(cafe/fonts/fraunces-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: "Fraunces"; src: url(cafe/fonts/fraunces-latin-wght-italic.woff2) format("woff2"); font-weight: 100 900; font-style: italic; }
+  @font-face { font-family: "Inter"; src: url(cafe/fonts/inter-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; }
+  :root { --ink: #1f1a17; --muted: #6b6159; --paper: #fbf7f0; --terra: #b5532f; --line: rgba(31,26,23,.14); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 "Inter", system-ui, sans-serif; }
+  html[data-lang="es"] [lang="en"], html[data-lang="en"] [lang="es"], html:not([data-lang]) [lang="en"] { display: none !important; }
+  .wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+  .brand { font-family: "Fraunces", serif; font-weight: 600; font-size: 18px; }
+  .brand i { color: var(--terra); }
+  button.lang { border: 1.5px solid var(--ink); background: none; border-radius: 99px; padding: 6px 12px; font: 700 13px "Inter", sans-serif; cursor: pointer; color: var(--ink); }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; letter-spacing: -.02em; margin: 28px 0 14px; }
+  h1 em { color: var(--terra); }
+  .lead { font-size: 18px; color: var(--muted); max-width: 52ch; margin: 0 0 40px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .card { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+  .card img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+  .card div { padding: 18px 20px 20px; }
+  .card h2 { font-family: "Fraunces", serif; font-weight: 500; font-size: 24px; margin: 0 0 4px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .cta { margin: 56px 0 40px; padding: 28px; border-radius: 18px; background: var(--ink); color: var(--paper); display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .cta h2 { font-family: "Fraunces", serif; font-weight: 500; font-size: 28px; margin: 0; }
+  .cta p { margin: 6px 0 0; color: #d9cfc3; }
+  .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 13px 20px; border-radius: 99px; text-decoration: none; font-weight: 700; }
+  .btn.wa { background: #25D366; color: #fff; }
+  .btn.pdf { border: 1.5px solid var(--paper); color: var(--paper); }
+  footer { padding: 0 0 40px; font-size: 13px; color: var(--muted); }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Gee Van D <i>· webs</i></div>
+    <button class="lang" type="button" id="lang">EN</button>
+  </header>
+
+  <h1><span lang="es">Webs para negocios de Ibiza: <em>ejemplos</em></span><span lang="en">Websites for Ibiza businesses: <em>examples</em></span></h1>
+  <p class="lead"><span lang="es">Cuatro demos con negocios inventados. Ábrelas en el móvil: así quedaría la tuya, con tu nombre, tus fotos y tus precios.</span><span lang="en">Four demos with made-up businesses. Open them on your phone: this is how yours would look, with your name, photos and prices.</span></p>
+
+  <div class="grid">
+    <a class="card" href="cafe/"><img src="thumbs/cafe.jpg" alt="" loading="lazy"><div><h2><span lang="es">Café y restaurante</span><span lang="en">Café &amp; restaurant</span></h2><p><span lang="es">Carta con precios, horario en vivo, reservas por WhatsApp.</span><span lang="en">Menu with prices, live hours, WhatsApp bookings.</span></p></div></a>
+    <a class="card" href="salon/"><img src="thumbs/salon.jpg" alt="" loading="lazy"><div><h2><span lang="es">Peluquería y estética</span><span lang="en">Hair &amp; beauty salon</span></h2><p><span lang="es">Lista de servicios y precios, cita en dos minutos.</span><span lang="en">Services and prices, book in two minutes.</span></p></div></a>
+    <a class="card" href="trades/"><img src="thumbs/trades.jpg" alt="" loading="lazy"><div><h2><span lang="es">Fontanero, electricista y oficios</span><span lang="en">Plumber, electrician &amp; trades</span></h2><p><span lang="es">Llamada y WhatsApp primero, zonas y presupuesto.</span><span lang="en">Call and WhatsApp first, areas and quotes.</span></p></div></a>
+    <a class="card" href="rental/"><img src="thumbs/rental.jpg" alt="" loading="lazy"><div><h2><span lang="es">Alquiler de barcos y villas</span><span lang="en">Boat &amp; villa rental</span></h2><p><span lang="es">Flota, precios por temporada, solicitud de reserva.</span><span lang="en">Fleet, seasonal prices, booking requests.</span></p></div></a>
+  </div>
+
+  <div class="cta">
+    <div>
+      <h2><span lang="es">¿Quieres la tuya?</span><span lang="en">Want one for your business?</span></h2>
+      <p><span lang="es">Desde 390 € + IVA. Español e inglés, WhatsApp, horario y mapa.</span><span lang="en">From €390 + VAT. Spanish and English, WhatsApp, hours and map.</span></p>
+    </div>
+    <div class="btns">
+      <a class="btn wa" id="wa" href="https://wa.me/34634852119" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn pdf" href="Gee-Van-D-Webs-Ibiza-Precios.pdf" target="_blank" rel="noopener"><span lang="es">Ver precios</span><span lang="en">See prices</span></a>
+    </div>
+  </div>
+
+  <footer><span lang="es">Los negocios, reseñas y precios de las demos son ficticios.</span><span lang="en">The businesses, reviews and prices in these demos are fictional.</span> · Gee Van D · geevand.com</footer>
+</div>
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('lang'), wa = document.getElementById('wa');
+    var msg = { es: 'Hola Gee, he visto las demos y me interesa una web.', en: "Hi Gee, I saw the demos and I'm interested in a website." };
+    function set(l) {
+      root.setAttribute('data-lang', l); root.lang = l; btn.textContent = l === 'es' ? 'EN' : 'ES';
+      wa.href = 'https://wa.me/34634852119?text=' + encodeURIComponent(msg[l]);
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    var saved; try { saved = localStorage.getItem('lang'); } catch (e) {}
+    set(saved === 'es' || saved === 'en' ? saved : ((navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en'));
+    btn.addEventListener('click', function () { set(root.getAttribute('data-lang') === 'es' ? 'en' : 'es'); });
+  })();
+</script>
+</body>
+</html>

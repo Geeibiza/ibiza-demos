@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Salitre · Café y brunch en Sant Antoni, Ibiza</title>
+<meta name="description" content="Café de especialidad, desayunos y brunch en Sant Antoni de Portmany, Ibiza. Carta, horario y reservas por WhatsApp.">
+<meta property="og:title" content="Café Salitre · Sant Antoni, Ibiza">
+<meta property="og:description" content="Café, desayunos y brunch en Sant Antoni. Carta, horario y WhatsApp.">
+<meta name="theme-color" content="#f4ece0">
+<script>document.documentElement.classList.add('js')</script>
+<!-- EDIT: business details. Opening hours here drive the "Open now" badge and hours list. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Salitre",
+  "telephone": "+34 634 852 119",
+  "servesCuisine": ["Brunch", "Café"],
+  "priceRange": "€",
+  "address": { "@type": "PostalAddress", "streetAddress": "Carrer de l'Exemple, 1", "addressLocality": "Sant Antoni de Portmany", "postalCode": "07820", "addressRegion": "Illes Balears", "addressCountry": "ES" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "15:00" }
+  ]
+}
+</script>
+<script>
+  window.SITE = {
+    whatsapp: "34634852119",
+    phone: "+34 634 852 119",
+    mapQuery: "Carrer de l'Exemple 1, Sant Antoni de Portmany, Ibiza",
+    waText: { es: "Hola Café Salitre, quería preguntar…", en: "Hi Café Salitre, I'd like to ask…" }
+  };
+</script>
+<link rel="preload" href="fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="base.css">
+<style>
+  @font-face { font-family: "Fraunces"; src: url(fonts/fraunces-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Fraunces"; src: url(fonts/fraunces-latin-wght-italic.woff2) format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
+  @font-face { font-family: "Inter"; src: url(fonts/inter-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+
+  :root {
+    --cream: #f4ece0; --paper: #fbf7f0; --ink: #2a211b; --muted: #6f6257;
+    --terra: #b5532f; --terra-dark: #8f3f22; --olive: #5f6b3a; --line: rgba(42,33,27,.14);
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+    --map-bg: #e8dccb;
+  }
+  body { background: var(--cream); color: var(--ink); font: 16px/1.6 var(--sans); }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.05; margin: 0; letter-spacing: -.02em; }
+  em { font-style: italic; color: var(--terra); }
+  .eyebrow { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid var(--ink); transition: background .2s, color .2s; }
+  .btn-solid { background: var(--terra); border-color: var(--terra); color: #fff; }
+  .btn-solid:hover { background: var(--terra-dark); border-color: var(--terra-dark); }
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+
+  /* Nav */
+  header { position: sticky; top: 0; z-index: 40; background: rgba(244,236,224,.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+  .logo { font-family: var(--serif); font-size: 24px; text-decoration: none; font-weight: 600; }
+  .logo i { color: var(--terra); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { text-decoration: none; font-size: 15px; }
+  .nav-links a:hover { color: var(--terra); }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .lang { border: 1.5px solid var(--ink); background: none; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 700; color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 56px 0 72px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(44px, 7vw, 92px); }
+  .hero p.lead { font-size: 18px; color: var(--muted); max-width: 46ch; margin: 22px 0 30px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); margin-bottom: 22px; }
+  .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #aaa; }
+  .status.is-open::before { background: #3c9a52; box-shadow: 0 0 0 4px rgba(60,154,82,.18); }
+  .status.is-closed::before { background: var(--terra); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .collage { position: relative; aspect-ratio: 1 / 1.05; }
+  .collage .ph { position: absolute; border-radius: 22px; }
+  .collage .a { inset: 0 18% 22% 0; --ph: linear-gradient(140deg, #c98e62, #8f5a3a); }
+  .collage .b { width: 46%; aspect-ratio: 3/4; right: 0; bottom: 0; --ph: linear-gradient(140deg, #9aa06b, #5f6b3a); border: 8px solid var(--cream); }
+  .stamp { position: absolute; left: -14px; top: 8%; width: 116px; height: 116px; border-radius: 50%; background: var(--ink); color: var(--cream); display: grid; place-content: center; text-align: center; font-family: var(--serif); font-size: 15px; line-height: 1.1; transform: rotate(-10deg); }
+  .stamp b { font-size: 30px; display: block; }
+
+  /* Info strip */
+  .strip { border-block: 1px solid var(--line); background: var(--paper); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .strip div > div { padding: 22px 0; }
+  .strip .cell { padding: 22px 20px; border-left: 1px solid var(--line); }
+  .strip .cell:first-child { border-left: 0; padding-left: 0; }
+  .strip strong { display: block; font-family: var(--serif); font-size: 20px; font-weight: 500; }
+  .strip span.k { font-size: 13px; color: var(--muted); }
+
+  section { padding: 96px 0; }
+  .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 44px; flex-wrap: wrap; }
+  .sec-head h2 { font-size: clamp(36px, 5vw, 60px); }
+
+  /* About */
+  .about { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+  .about .ph { aspect-ratio: 4/5; border-radius: 22px; --ph: linear-gradient(160deg, #d8b48c, #a87650); }
+  .about p { font-size: 18px; color: var(--muted); }
+  .facts { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+  .facts b { font-family: var(--serif); font-size: 40px; font-weight: 500; display: block; color: var(--terra); line-height: 1; }
+  .facts span { font-size: 13px; color: var(--muted); }
+
+  /* Menu */
+  .menu-sec { background: var(--ink); color: var(--cream); }
+  .menu-sec .eyebrow { color: #c7b8a6; }
+  .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .menu-col h3 { font-size: 28px; margin-bottom: 18px; color: #f1c9a8; }
+  .item { padding: 14px 0; border-bottom: 1px dashed rgba(244,236,224,.22); }
+  .item-top { display: flex; justify-content: space-between; gap: 12px; font-weight: 600; }
+  .item p { margin: 4px 0 0; font-size: 14px; color: #c7b8a6; }
+  .menu-note { margin-top: 36px; font-size: 14px; color: #c7b8a6; }
+
+  /* Gallery */
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 14px; }
+  .gallery .ph { border-radius: 16px; }
+  .gallery .ph:nth-child(1) { grid-column: span 2; grid-row: span 2; --ph: linear-gradient(140deg, #c98e62, #7d4a2e); }
+  .gallery .ph:nth-child(2) { --ph: linear-gradient(140deg, #9aa06b, #5f6b3a); }
+  .gallery .ph:nth-child(3) { --ph: linear-gradient(140deg, #e3c7a3, #b98d63); }
+  .gallery .ph:nth-child(4) { grid-column: span 2; --ph: linear-gradient(140deg, #b5532f, #6d2f19); }
+
+  /* Reviews */
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .review { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+  .stars { color: #d39b2a; letter-spacing: 2px; font-size: 15px; }
+  .review blockquote { margin: 14px 0 18px; font-family: var(--serif); font-size: 19px; line-height: 1.4; }
+  .review cite { font-style: normal; font-size: 14px; color: var(--muted); }
+
+  /* Visit */
+  .visit { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+  .visit .map-box { border-radius: 22px; }
+  .map-consent button { justify-self: center; }
+  .addr { font-family: var(--serif); font-size: 24px; margin: 18px 0 24px; line-height: 1.3; }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0 90px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer a { text-decoration: none; margin-left: 18px; }
+  footer a:hover { color: var(--terra); }
+
+  @media (max-width: 900px) {
+    .nav-links { position: fixed; inset: 68px 0 auto 0; flex-direction: column; align-items: flex-start; gap: 0; padding: 8px 16px 20px; background: var(--cream); border-bottom: 1px solid var(--line); transform: translateY(-120%); transition: transform .3s ease; z-index: -1; }
+    .nav-open .nav-links { transform: none; }
+    .nav-links a { padding: 12px 0; font-size: 18px; width: 100%; }
+    .nav-toggle { display: block; }
+    .nav-right .btn { display: none; }
+    .hero, .about, .visit { grid-template-columns: 1fr; }
+    .hero { padding-top: 32px; gap: 40px; }
+    .menu-grid, .reviews { grid-template-columns: 1fr; }
+    .strip .wrap { grid-template-columns: 1fr; }
+    .strip .cell { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0; }
+    .strip .cell:first-child { border-top: 0; }
+    .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+    section { padding: 72px 0; }
+    footer a { margin: 0 18px 0 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="logo" href="#">Café <i>Salitre</i></a>
+    <div class="nav-links">
+      <a href="#carta"><span lang="es">Carta</span><span lang="en">Menu</span></a>
+      <a href="#nosotros"><span lang="es">Nosotros</span><span lang="en">About</span></a>
+      <a href="#opiniones"><span lang="es">Opiniones</span><span lang="en">Reviews</span></a>
+      <a href="#visitanos"><span lang="es">Visítanos</span><span lang="en">Visit</span></a>
+    </div>
+    <div class="nav-right">
+      <button class="lang" type="button" data-lang-toggle>EN</button>
+      <a class="btn btn-solid" data-wa href="#"><span lang="es">WhatsApp</span><span lang="en">WhatsApp</span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="reveal">
+      <span class="status" data-open-status>Abierto ahora</span>
+      <h1><span lang="es">Café, brunch y <em>buena luz</em> en Sant Antoni</span><span lang="en">Coffee, brunch and <em>good light</em> in Sant Antoni</span></h1>
+      <p class="lead"><span lang="es">Café de especialidad, pan de masa madre y desayunos hechos al momento. Te esperamos a dos calles del puerto.</span><span lang="en">Specialty coffee, sourdough bread and breakfasts made to order. Two streets from the harbour.</span></p>
+      <div class="actions">
+        <a class="btn btn-solid" href="#carta"><span lang="es">Ver la carta</span><span lang="en">See the menu</span></a>
+        <a class="btn btn-ghost" data-wa href="#" data-wa-es="Hola, quería reservar una mesa para…" data-wa-en="Hi, I'd like to book a table for…"><span lang="es">Reservar mesa</span><span lang="en">Book a table</span></a>
+      </div>
+    </div>
+    <div class="collage reveal">
+      <div class="ph a"><span lang="es">Foto: terraza / local</span><span lang="en">Photo: terrace / venue</span></div>
+      <div class="ph b"><span lang="es">Foto: plato</span><span lang="en">Photo: dish</span></div>
+      <div class="stamp"><div><b>4,9★</b>Google</div></div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="cell"><span class="k"><span lang="es">Dirección</span><span lang="en">Address</span></span><strong>Carrer de l'Exemple, 1</strong></div>
+      <div class="cell"><span class="k"><span lang="es">Hoy</span><span lang="en">Today</span></span><strong data-open-status>—</strong></div>
+      <div class="cell"><span class="k"><span lang="es">Teléfono</span><span lang="en">Phone</span></span><strong><a data-tel href="#" style="text-decoration:none"><span data-tel-text></span></a></strong></div>
+    </div>
+  </div>
+
+  <section id="nosotros">
+    <div class="wrap about">
+      <div class="ph reveal"><span lang="es">Foto: equipo / barra</span><span lang="en">Photo: team / counter</span></div>
+      <div class="reveal">
+        <p class="eyebrow"><span lang="es">Nuestra historia</span><span lang="en">Our story</span></p>
+        <h2 style="font-size:clamp(36px,5vw,56px);margin:12px 0 22px"><span lang="es">Un café de barrio, <em>todo el año</em></span><span lang="en">A neighbourhood café, <em>all year round</em></span></h2>
+        <p><span lang="es">Abrimos en 2019 con una idea sencilla: buen café, producto local y un sitio donde apetezca quedarse. Tostamos con un pequeño tostador de Ibiza y el pan llega cada mañana de un horno de Sant Antoni.</span><span lang="en">We opened in 2019 with a simple idea: good coffee, local produce and a place you want to stay. Our beans come from a small Ibiza roaster and the bread arrives every morning from a Sant Antoni bakery.</span></p>
+        <div class="facts">
+          <div><b>2019</b><span lang="es">Desde</span><span lang="en">Since</span></div>
+          <div><b>100%</b><span lang="es">Masa madre</span><span lang="en">Sourdough</span></div>
+          <div><b>12</b><span lang="es">Meses abiertos</span><span lang="en">Months open</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="carta" class="menu-sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="eyebrow"><span lang="es">La carta</span><span lang="en">The menu</span></p><h2><span lang="es">Para empezar bien el día</span><span lang="en">To start the day right</span></h2></div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-col reveal">
+          <h3><span lang="es">Desayunos</span><span lang="en">Breakfast</span></h3>
+          <div class="item"><div class="item-top"><span><span lang="es">Tostada de tomate</span><span lang="en">Tomato toast</span></span><span>4,50 €</span></div><p><span lang="es">Masa madre, tomate rallado, aceite de Ibiza</span><span lang="en">Sourdough, grated tomato, Ibiza olive oil</span></p></div>
+          <div class="item"><div class="item-top"><span><span lang="es">Tostada de aguacate</span><span lang="en">Avocado toast</span></span><span>8,50 €</span></div><p><span lang="es">Aguacate, huevo poché, semillas</span><span lang="en">Avocado, poached egg, seeds</span></p></div>
+          <div class="item"><div class="item-top"><span>Granola bowl</span><span>7,00 €</span></div><p><span lang="es">Yogur griego, fruta de temporada, miel</span><span lang="en">Greek yoghurt, seasonal fruit, honey</span></p></div>
+        </div>
+        <div class="menu-col reveal">
+          <h3>Brunch</h3>
+          <div class="item"><div class="item-top"><span>Eggs Benedict</span><span>12,50 €</span></div><p><span lang="es">Huevos, jamón, holandesa, brioche</span><span lang="en">Eggs, ham, hollandaise, brioche</span></p></div>
+          <div class="item"><div class="item-top"><span>Pancakes</span><span>9,50 €</span></div><p><span lang="es">Frutos rojos y sirope de arce</span><span lang="en">Berries and maple syrup</span></p></div>
+          <div class="item"><div class="item-top"><span><span lang="es">Bocadillo de sobrasada</span><span lang="en">Sobrassada sandwich</span></span><span>8,00 €</span></div><p><span lang="es">Sobrasada, miel, queso de cabra</span><span lang="en">Sobrassada, honey, goat cheese</span></p></div>
+        </div>
+        <div class="menu-col reveal">
+          <h3><span lang="es">Café y bebidas</span><span lang="en">Coffee &amp; drinks</span></h3>
+          <div class="item"><div class="item-top"><span>Espresso</span><span>1,80 €</span></div></div>
+          <div class="item"><div class="item-top"><span>Flat white</span><span>3,20 €</span></div><p><span lang="es">Leche de avena sin coste extra</span><span lang="en">Oat milk at no extra cost</span></p></div>
+          <div class="item"><div class="item-top"><span><span lang="es">Zumo natural</span><span lang="en">Fresh juice</span></span><span>4,50 €</span></div></div>
+          <div class="item"><div class="item-top"><span>Matcha latte</span><span>4,20 €</span></div></div>
+        </div>
+      </div>
+      <p class="menu-note"><span lang="es">Pregúntanos por alérgenos. Precios con IVA incluido.</span><span lang="en">Ask us about allergens. Prices include VAT.</span></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="gallery reveal">
+        <div class="ph"><span lang="es">Foto principal</span><span lang="en">Main photo</span></div>
+        <div class="ph"><span>Foto</span></div>
+        <div class="ph"><span>Foto</span></div>
+        <div class="ph"><span>Foto</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="eyebrow"><span lang="es">Opiniones en Google</span><span lang="en">Google reviews</span></p><h2><span lang="es">Lo que dicen</span><span lang="en">What people say</span></h2></div>
+        <a class="btn btn-ghost" href="#" data-directions><span lang="es">Ver en Google</span><span lang="en">See on Google</span></a>
+      </div>
+      <!-- EDIT: copy 3 real Google reviews (first name + initial only). -->
+      <div class="reviews">
+        <div class="review reveal"><div class="stars">★★★★★</div><blockquote><span lang="es">“El mejor flat white de Sant Antoni y un trato encantador.”</span><span lang="en">“The best flat white in Sant Antoni, and lovely staff.”</span></blockquote><cite>Laura M.</cite></div>
+        <div class="review reveal"><div class="stars">★★★★★</div><blockquote><span lang="es">“Venimos cada mañana de las vacaciones. Las tostadas, increíbles.”</span><span lang="en">“We came every morning of our holiday. The toasts are amazing.”</span></blockquote><cite>Tom R.</cite></div>
+        <div class="review reveal"><div class="stars">★★★★★</div><blockquote><span lang="es">“Sitio tranquilo, buena música y pan de verdad.”</span><span lang="en">“Calm place, good music and real bread.”</span></blockquote><cite>Marc P.</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visitanos" style="background:var(--paper);border-top:1px solid var(--line)">
+    <div class="wrap visit">
+      <div class="reveal">
+        <p class="eyebrow"><span lang="es">Visítanos</span><span lang="en">Visit us</span></p>
+        <h2 style="font-size:clamp(36px,5vw,56px);margin-top:12px"><span lang="es">Horario</span><span lang="en">Opening hours</span></h2>
+        <p class="addr">Carrer de l'Exemple, 1<br>07820 Sant Antoni de Portmany</p>
+        <ul data-hours></ul>
+        <div class="actions" style="margin-top:28px">
+          <a class="btn btn-solid" data-directions href="#"><span lang="es">Cómo llegar</span><span lang="en">Directions</span></a>
+          <a class="btn btn-ghost" data-tel href="#"><span lang="es">Llamar</span><span lang="en">Call</span></a>
+        </div>
+      </div>
+      <div class="map-box reveal" data-map>
+        <div class="map-consent">
+          <strong><span lang="es">Mapa de Google</span><span lang="en">Google Map</span></strong>
+          <small><span lang="es">Al cargar el mapa, Google puede usar cookies.</span><span lang="en">Loading the map lets Google set cookies.</span></small>
+          <button class="btn btn-ghost" type="button"><span lang="es">Cargar mapa</span><span lang="en">Load map</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Café Salitre · Sant Antoni, Ibiza</span>
+    <span>
+      <a href="#" data-open-legal="aviso"><span lang="es">Aviso legal</span><span lang="en">Legal notice</span></a>
+      <a href="#" data-open-legal="privacidad"><span lang="es">Privacidad</span><span lang="en">Privacy</span></a>
+      <a href="#" data-open-legal="cookies">Cookies</a>
+    </span>
+  </div>
+</footer>
+<!-- Legal pages (LSSI-CE + RGPD). Fill every highlighted [placeholder] per client.
+     Starting text only: have the client's gestoría/lawyer check it. -->
+<dialog class="legal" id="legal" aria-label="Legal">
+  <div class="legal-bar"><button type="button" data-close-legal><span lang="es">Cerrar</span><span lang="en">Close</span></button></div>
+  <div class="legal-inner">
+    <div lang="es">
+      <h2 id="aviso">Aviso legal</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa:</p>
+      <ul>
+        <li>Titular: <span class="ph-note">[Nombre y apellidos o razón social]</span></li>
+        <li>NIF/CIF: <span class="ph-note">[NIF]</span></li>
+        <li>Domicilio: <span class="ph-note">[Dirección completa, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Teléfono: <span data-tel-text></span></li>
+        <li><span class="ph-note">[Si es sociedad: datos del Registro Mercantil]</span></li>
+      </ul>
+      <p>Los textos, fotos y logotipos de esta web pertenecen a su titular o se usan con permiso. No se permite su reproducción sin autorización.</p>
+
+      <h2 id="privacidad">Política de privacidad</h2>
+      <h3>Responsable</h3>
+      <p>El titular indicado en el aviso legal.</p>
+      <h3>Qué datos tratamos</h3>
+      <p>Esta web no tiene formularios que guarden datos. Los botones y formularios abren WhatsApp con un mensaje ya escrito; tú decides si lo envías. Si nos contactas por WhatsApp, teléfono o email, usamos tu nombre, teléfono y lo que nos cuentes solo para responderte y gestionar tu petición.</p>
+      <h3>Base legal y conservación</h3>
+      <p>Tu consentimiento al contactarnos y, en su caso, la aplicación de medidas precontractuales (art. 6.1.a y 6.1.b RGPD). Conservamos los datos el tiempo necesario para atenderte y cumplir obligaciones legales.</p>
+      <h3>Terceros</h3>
+      <p>No cedemos tus datos salvo obligación legal. WhatsApp (Meta) trata los mensajes según su propia política de privacidad. La web está alojada en <span class="ph-note">[proveedor de hosting]</span>.</p>
+      <h3>Tus derechos</h3>
+      <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <span class="ph-note">[email]</span>. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+
+      <h2 id="cookies">Cookies</h2>
+      <p>Esta web no usa cookies propias ni herramientas de analítica. Solo guarda en tu navegador el idioma que eliges, y ese dato no sale de tu dispositivo. El mapa de Google solo se carga si pulsas «Cargar mapa». A partir de ese momento Google puede instalar cookies según su propia política.</p>
+    </div>
+
+    <div lang="en">
+      <h2 id="aviso-en">Legal notice</h2>
+      <p>As required by article 10 of Spanish Law 34/2002 (LSSI-CE):</p>
+      <ul>
+        <li>Owner: <span class="ph-note">[Full name or company name]</span></li>
+        <li>Tax ID (NIF/CIF): <span class="ph-note">[NIF]</span></li>
+        <li>Address: <span class="ph-note">[Full address, Ibiza]</span></li>
+        <li>Email: <span class="ph-note">[email]</span> · Phone: <span data-tel-text></span></li>
+        <li><span class="ph-note">[If a company: Mercantile Registry details]</span></li>
+      </ul>
+      <p>The text, photos and logos on this site belong to the owner or are used with permission. Please don't reproduce them without authorisation.</p>
+
+      <h2 id="privacidad-en">Privacy policy</h2>
+      <h3>Controller</h3>
+      <p>The owner named in the legal notice.</p>
+      <h3>What data we process</h3>
+      <p>This website has no forms that store data. Buttons and forms open WhatsApp with a pre-written message, and you decide whether to send it. If you contact us by WhatsApp, phone or email, we use your name, number and message only to reply and handle your request.</p>
+      <h3>Legal basis and retention</h3>
+      <p>Your consent when you contact us and, where relevant, pre-contractual steps (art. 6.1.a and 6.1.b GDPR). We keep data only as long as needed to help you and to meet legal obligations.</p>
+      <h3>Third parties</h3>
+      <p>We don't share your data unless the law requires it. WhatsApp (Meta) processes messages under its own privacy policy. This site is hosted by <span class="ph-note">[hosting provider]</span>.</p>
+      <h3>Your rights</h3>
+      <p>You can request access, correction, deletion, objection, restriction and portability by writing to <span class="ph-note">[email]</span>. You can also complain to the Spanish Data Protection Agency (aepd.es).</p>
+
+      <h2 id="cookies-en">Cookies</h2>
+      <p>This site uses no cookies of its own and no analytics. It only remembers your chosen language in your browser, and that never leaves your device. The Google map loads only if you tap "Load map". From then on, Google may set cookies under its own policy.</p>
+    </div>
+  </div>
+</dialog>
+<a class="wa-float" data-wa href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="site.js"></script>
+
+
+<style>
+  .demo-pill { position: fixed; left: 16px; bottom: 16px; z-index: 70; max-width: calc(100% - 104px); background: rgba(20,20,20,.88); color: #fff; font: 12px/1.4 system-ui, sans-serif; padding: 8px 12px; border-radius: 12px; }
+  .demo-pill a { color: #fff; font-weight: 700; }
+  @media (max-width: 900px) { body:has(.callbar) .demo-pill { bottom: 72px; } }
+</style>
+<div class="demo-pill">
+  <span lang="es"><b>Demo</b> · negocio ficticio. Los botones de WhatsApp escriben a Gee. <a href="../">Más demos</a></span>
+  <span lang="en"><b>Demo</b> · fictional business. WhatsApp buttons message Gee. <a href="../">More demos</a></span>
+</div>
+</body>
+</html>
