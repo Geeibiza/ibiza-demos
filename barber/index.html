@@ -94,6 +94,8 @@
   header.solid { background: rgba(11,10,9,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 14px; }
   .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 24px; letter-spacing: .04em; text-transform: uppercase; }
+  .logo { white-space: nowrap; }
+  @media (max-width: 900px) { .logo { font-size: 18px; gap: 8px; } .logo .crown { width: 24px; height: 19px; } }
   .crown { display: inline-block; width: 30px; height: 24px; background: var(--foil); background-size: 250% 100%; animation: foil 6s linear infinite; -webkit-mask: var(--crown) center / contain no-repeat; mask: var(--crown) center / contain no-repeat; }
   .nav-links { display: flex; gap: 26px; }
   .nav-links a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--muted); }

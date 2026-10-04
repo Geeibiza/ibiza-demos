@@ -1,9 +1,9 @@
 {
   "TEMPLATE": "125",
-  "NAME": "King Barber",
-  "WORD1": "King",
-  "WORD2": "Barber",
-  "NAME_AR": "كينغ باربر",
+  "NAME": "Kings Barber Shop",
+  "WORD1": "Kings",
+  "WORD2": "Barber<br>Shop",
+  "NAME_AR": "كينغز باربر شوب",
   "STREET": "Carrer de Huesca",
   "POSTCODE": "07840",
   "TOWN": "Santa Eulària",
@@ -18,7 +18,19 @@
   "PRICE_6": "·· €",
   "PRICE_NOTE": "<span lang=\"es\">Precios y tiempos: los ponemos juntos. </span><span lang=\"en\">Prices and times: we'll fill them in together. </span><span lang=\"ar\">الأسعار والأوقات: نضعها معًا. </span><br>",
   "HOURS_JSON": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00" }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "21:00"
+    }
   ],
   "REVIEWS_HTML": "<div class=\"quote reveal\"><p>“…mi peluquería favorita con diferencia, muy buen precio y en mi opinión mejores degradados de la isla.”</p><cite>Angelo M. · Google</cite></div>\n<div class=\"quote reveal\"><p>“Buen trato y buenos profesionales.”</p><cite>Google</cite></div>\n<div class=\"quote reveal\"><p>“Los peluqueros son además de educados, muy profesionales.”</p><cite>Google</cite></div>"
 }
